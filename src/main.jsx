@@ -1,37 +1,42 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.scss'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { Provider } from 'react'
+import React from "react"
+import ReactDOM from "react-dom/client"
+import App from "./App.jsx"
+import "./index.scss"
 
-import About from './pages/About.jsx'
-import Recipes from './pages/Recipes.jsx'
-import Recipe from './pages/Recipe.jsx'
+import { Provider } from 'react-redux'
+import store from "./app/store.jsx"
+
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import About from "./pages/About.jsx"
+import Recipes from "./pages/Recipes.jsx"
+import Recipe from "./pages/Recipe.jsx"
+
+
+
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App/>
   },
   {
-    path: '/recipes',
+    path: "/recipes",
     element: <Recipes/>
   },
   {
-    path: '/recipes/:recipeId',
+    path: "/recipes/:recipeId",
     element: <Recipe/>
   },
   {
-    path: '/about',
+    path: "/about",
     element: <About/>
   }
 ])
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
-      <RouterProvider router={router}/>
-    {/* </Provider> */}
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 )
