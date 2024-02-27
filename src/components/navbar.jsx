@@ -18,7 +18,10 @@ function Navbar() {
   
 
   return (
-    <nav className="navbar">
+    <nav 
+      className="navbar"
+      id="navbar"
+    >
         <NavLink 
           className="satisfy-regular" 
           id="logo" 

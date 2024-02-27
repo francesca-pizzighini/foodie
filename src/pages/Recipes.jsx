@@ -1,5 +1,6 @@
 import Header from "../components/header"
 import Navbar from "../components/navbar"
+import Footer from "../components/footer"
 
 function Recipes() {
   return (
@@ -11,7 +12,9 @@ function Recipes() {
           text="Find your next meal"
         />
 
-        <div style={{height: "500px"}}></div>
+        <div style={{height: "100px"}}></div>
+
+        <Footer/>
     </div>
   )
 }

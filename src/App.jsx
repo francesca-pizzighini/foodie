@@ -2,6 +2,7 @@ import './App.scss'
 
 import Navbar from "./components/navbar.jsx"
 import Header from "./components/header.jsx"
+import Footer from './components/footer.jsx'
 
 function App() {
 
@@ -11,10 +12,12 @@ function App() {
 
       <Header
         img="home-img"
-        text="discover a new world of healty recipes"
+        text="Discover a new world of healty recipes"
       />
 
-      <div style={{height: "500px"}}></div>
+      <div style={{height: "100px"}}></div>
+
+      <Footer/>
     </>
   )
 }
