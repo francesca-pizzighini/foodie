@@ -1,13 +1,21 @@
 import './App.scss'
 
-import Navbar from './components/navbar.jsx'
+import Navbar from "./components/navbar.jsx"
+import Header from "./components/header.jsx"
 
 function App() {
 
   return (
     <>
       <Navbar/>
-      <p>sito ricette</p>
+
+      <Header
+        img="home-img"
+        text="discover a new world of healty recipes"
+        color="light-color"
+      />
+
+      <div style={{height: "500px"}}></div>
     </>
   )
 }

@@ -1,10 +1,18 @@
+import Header from "../components/header"
 import Navbar from "../components/navbar"
 
 function Recipes() {
   return (
     <div>
         <Navbar/>
-        <p>all recipes page</p>
+
+        <Header
+          img="food-img"
+          text="Find your next meal"
+          color="light-color"
+        />
+
+        <div style={{height: "500px"}}></div>
     </div>
   )
 }

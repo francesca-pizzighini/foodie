@@ -3,11 +3,6 @@ import { NavLink } from "react-router-dom"
 import foodie from "../assets/img/foodie.png"
 
 function Navbar() {
-  const x=15
-
-  const recipes = document.getElementById("recipes")
-  const about = document.getElementById("about")
-  const home = document.getElementById("logo")
   const menuDisplay = ({ isActive }) => {
     if (window.innerWidth > 600) {
       return {
@@ -19,22 +14,17 @@ function Navbar() {
       }
     }
   }
-  const logoDisplay = {
-    height: window.innerWidth > 600 ? "70px" : "50px",
-  }
     
   
 
   return (
     <nav className="navbar">
         <NavLink 
-        style={logoDisplay}
           className="satisfy-regular" 
           id="logo" 
           to={"/"}
           >
             <img 
-              style={logoDisplay}
               src={foodie} 
               alt="logo del brand"
             />

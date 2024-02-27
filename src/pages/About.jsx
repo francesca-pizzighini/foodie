@@ -1,10 +1,18 @@
+import Header from "../components/header"
 import Navbar from "../components/navbar"
 
 function About() {
   return (
     <div>
         <Navbar/>
-        <p>about page</p>
+
+        <Header
+          img="team-img dark-text"
+          text="Our team"
+          color="dark-color"
+        />
+
+        <div style={{height: "500px"}}></div>
     </div>
   )
 }
