@@ -5,7 +5,7 @@ function Header({img, text, color}) {
         className={`header ${img}`}
     >
         <h2
-            className={`satisfy-regular ${color}`}
+            className="satisfy-regular"
         >{text}</h2>
     </div>
   )

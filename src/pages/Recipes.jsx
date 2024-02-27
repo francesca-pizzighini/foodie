@@ -9,7 +9,6 @@ function Recipes() {
         <Header
           img="food-img"
           text="Find your next meal"
-          color="light-color"
         />
 
         <div style={{height: "500px"}}></div>

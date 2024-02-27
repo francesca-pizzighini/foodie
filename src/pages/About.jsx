@@ -9,7 +9,6 @@ function About() {
         <Header
           img="team-img dark-text"
           text="Our team"
-          color="dark-color"
         />
 
         <div style={{height: "500px"}}></div>
