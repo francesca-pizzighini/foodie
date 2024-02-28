@@ -82,7 +82,7 @@ body{
 //header
 .home-img {
   background-image: url("https://images.unsplash.com/photo-1532768907235-78653b7dc71d?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-position: center bottom !important;
+  background-position: 50% 60% !important;
 }
 .team-img {
   background-image: url("https://images.unsplash.com/photo-1573496774426-fe3db3dd1731?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
@@ -180,6 +180,7 @@ body{
     h2{
       font-size: 2.5rem;
       font-weight: 700;
+      padding-top: 30px;
     }
     p{
       font-size: 1.3rem;
@@ -187,6 +188,55 @@ body{
       padding-top: 10px;
     }
 
+    //card-about 
+    .card-about-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .card-about {
+        width: 300px;
+        border-radius: 20px;
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+    
+        .c-a-img {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          height: 200px;
+          background-size: cover;
+          background-position: center center;
+        }
+        .c-a-food{
+          background-image: url("https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        }
+        .c-a-health{
+          background-image: url("https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        }
+        .c-a-enviroment {
+          background-image: url("https://images.unsplash.com/photo-1552799446-159ba9523315?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        }
+        .c-a-text {
+          height: 200px;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          padding: 5px 10px;
+          border-bottom: 3px solid $brown;
+          border-left: 1px solid $brown;
+          border-right: 1px solid $brown;
+
+    
+          h3 {
+            font-size: 1.6rem;
+          }
+    
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -230,6 +280,27 @@ body{
 
       h2{
         font-size: 3rem;
+      }
+
+      //card-about
+      .card-about-container{
+        .card-about{
+          width: 400px;
+
+          .c-a-img{
+            height: 300px;
+          }
+          .c-a-text{
+            height: 250px;
+
+            h3{
+              font-size: 2rem;
+            }
+            p{
+              font-size: 1.3rem;
+            }
+          }
+        }
       }
     }
   }
@@ -298,6 +369,26 @@ body{
       p{
         font-size: 1.3rem;
       }
+
+      //card-about
+      .card-about-container {
+        .card-about {
+          width: 500px;
+
+          .c-a-img{
+            height: 300px;
+          }
+
+          .c-a-text{
+            h3{
+              font-size: 2rem;
+            }
+            p{
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -358,6 +449,17 @@ body{
       p{
         font-size: 1.4rem;
       }
+
+      //card-about
+      .card-about-container{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .card-about{
+          width: 250px;
+        }
+      }
     }
   }
 }
@@ -376,6 +478,17 @@ body{
       }
       p{
         font-size: 1.8rem;
+      }
+
+      //card-about
+      .card-about-container{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .card-about{
+          width: 350px;
+        }
       }
     }
   }
@@ -397,6 +510,17 @@ body{
 
       p {
         font-size: 2.5rem;
+      }
+
+      //card-about
+      .card-about-container{
+        flex-direction: row;
+        justify-content: space-araund;
+        align-items: center;
+
+        .card-about{
+          width: 450px;
+        }
       }
     }
   }
