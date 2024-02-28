@@ -8,7 +8,7 @@ function Footer() {
 
         <div className="foo-break">
             <FooterLink
-                text="Find your first recipe"
+                text="Find your next meal"
                 linkText="Discover more"
                 routerText="/recipes"
             />

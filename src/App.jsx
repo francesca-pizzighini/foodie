@@ -15,6 +15,10 @@ function App() {
         text="Discover a new world of healty recipes"
       />
 
+      <div className="safe">
+        <h2>Find your next meal</h2>
+      </div>
+
       <div style={{height: "100px"}}></div>
 
       <Footer/>

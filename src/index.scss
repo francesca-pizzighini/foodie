@@ -15,6 +15,21 @@ body{
   background-color: $light-color;
   color: $dark-color;
 }
+.safe {
+  padding: 30px 10px;
+  margin: 0px auto;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-top: 30px;
+  }
+  p {
+    font-size: 1.3rem;
+    font-weight: 200;
+    padding-top: 10px;
+  }
+}
 
 
 .dark-color{
@@ -88,9 +103,8 @@ body{
   background-image: url("https://images.unsplash.com/photo-1573496774426-fe3db3dd1731?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 .food-img {
-  background-image: url("https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=3110&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("https://images.unsplash.com/photo-1532768778661-1b347c5f02ce?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
-
 
 .header{
   background-size: cover;
@@ -175,18 +189,18 @@ body{
 //about page
 .about-page{
   .safe{
-    padding: 30px 10px;
+    // padding: 30px 10px;
 
-    h2{
-      font-size: 2.5rem;
-      font-weight: 700;
-      padding-top: 30px;
-    }
-    p{
-      font-size: 1.3rem;
-      font-weight: 200;
-      padding-top: 10px;
-    }
+    // h2{
+    //   font-size: 2.5rem;
+    //   font-weight: 700;
+    //   padding-top: 30px;
+    // }
+    // p{
+    //   font-size: 1.3rem;
+    //   font-weight: 200;
+    //   padding-top: 10px;
+    // }
 
     //card-about 
     .card-about-container{
@@ -250,6 +264,15 @@ body{
 
 //media queries
 @media only screen and (min-width: 500px) and (max-width: 699px) {
+  //general
+  .safe {
+    padding: 50px 20px;
+
+    h2 {
+      font-size: 3rem;
+    }
+  }
+
   //navbar
   .navbar{
     height: 100px;
@@ -276,34 +299,30 @@ body{
   //about page
   .about-page{
     .safe{
-      padding: 50px 20px;
-
-      h2{
-        font-size: 3rem;
-      }
-
       //card-about
-      .card-about-container{
-        .card-about{
+      .card-about-container {
+        .card-about {
           width: 400px;
-
-          .c-a-img{
+    
+          .c-a-img {
             height: 300px;
           }
-          .c-a-text{
+    
+          .c-a-text {
             height: 250px;
-
-            h3{
+    
+            h3 {
               font-size: 2rem;
             }
-            p{
+    
+            p {
               font-size: 1.3rem;
             }
           }
         }
       }
     }
-  }
+  }      
 }
 
 @media only screen and (min-width: 599px) and (max-width: 699px) {
@@ -322,6 +341,19 @@ body{
 }
 
 @media only screen and (min-width: 700px) and (max-width: 899px) {
+  //general
+  .safe {
+    padding: 50px 50px;
+
+    h2 {
+      font-size: 3.5rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
   //navbar
   .navbar {
     height: 100px;
@@ -360,30 +392,22 @@ body{
 
   //about page
   .about-page {
-    .safe {
-      padding: 50px 50px;
-
-      h2 {
-        font-size: 3.5rem;
-      }
-      p{
-        font-size: 1.3rem;
-      }
-
+    .safe{
       //card-about
       .card-about-container {
         .card-about {
           width: 500px;
-
-          .c-a-img{
+    
+          .c-a-img {
             height: 300px;
           }
-
-          .c-a-text{
-            h3{
+    
+          .c-a-text {
+            h3 {
               font-size: 2rem;
             }
-            p{
+    
+            p {
               font-size: 1.3rem;
             }
           }
@@ -394,6 +418,22 @@ body{
 }
 
 @media only screen and (min-width: 900px) {
+  //general
+  .safe {
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 50px 50px;
+
+    h2 {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
   //navbar
   .navbar {
     height: 100px;
@@ -437,26 +477,14 @@ body{
 
   //about page
   .about-page {
-    .safe {
-      width: 900px;
-      margin-right: auto;
-      margin-left: auto;
-      padding: 50px 50px;
-
-      h2{
-        font-size: 4rem;
-      }
-      p{
-        font-size: 1.4rem;
-      }
-
+    .safe{
       //card-about
-      .card-about-container{
+      .card-about-container {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-
-        .card-about{
+    
+        .card-about {
           width: 250px;
         }
       }
@@ -465,28 +493,32 @@ body{
 }
 
 @media only screen and (min-width: 1200px) {
+  //general
+  .safe {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 50px 50px;
+
+    h2 {
+      font-size: 5rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
   //about page
   .about-page {
-    .safe {
-      width: 1200px;
-      margin-right: auto;
-      margin-left: auto;
-      padding: 50px 50px;
-
-      h2{
-        font-size: 4rem;
-      }
-      p{
-        font-size: 1.8rem;
-      }
-
+    .safe{
       //card-about
-      .card-about-container{
+      .card-about-container {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-
-        .card-about{
+    
+        .card-about {
           width: 350px;
         }
       }
@@ -494,31 +526,34 @@ body{
   }
 }
 
+
 @media only screen and (min-width: 2500px) {
+  //general
+  .safe {
+    width: 2000px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 50px 50px;
+
+    h2 {
+      font-size: 6rem;
+    }
+
+    p {
+      font-size: 2.5rem;
+    }
+  }
 
   //about page
   .about-page {
-    .safe {
-      width: 2000px;
-      margin-right: auto;
-      margin-left: auto;
-      padding: 50px 50px;
-
-      h2 {
-        font-size: 6rem;
-      }
-
-      p {
-        font-size: 2.5rem;
-      }
-
+    .safe{
       //card-about
-      .card-about-container{
+      .card-about-container {
         flex-direction: row;
         justify-content: space-araund;
         align-items: center;
-
-        .card-about{
+    
+        .card-about {
           width: 450px;
         }
       }
