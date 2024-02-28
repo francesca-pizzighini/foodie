@@ -98,7 +98,7 @@ body{
   height: 400px;
   position: relative;
   
-  h2{
+  h1{
     font-size: 1.6rem;
     text-align: center;
     width: 300px;
@@ -168,9 +168,27 @@ body{
       }
     }
   }
-  
 }
 
+
+
+//about page
+.about-page{
+  .safe{
+    padding: 30px 10px;
+
+    h2{
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    p{
+      font-size: 1.3rem;
+      font-weight: 200;
+      padding-top: 10px;
+    }
+
+  }
+}
 
 
 
@@ -198,10 +216,21 @@ body{
   .header {
     height: 450px;
 
-    h2 {
+    h1 {
       bottom: 0%;
       font-size: 2rem;
       width: 500px;
+    }
+  }
+
+  //about page
+  .about-page{
+    .safe{
+      padding: 50px 20px;
+
+      h2{
+        font-size: 3rem;
+      }
     }
   }
 }
@@ -238,7 +267,7 @@ body{
   .header {
     height:500px;
 
-    h2 {
+    h1 {
       bottom:0%;
       font-size: 2.5rem;
       width: 600px;
@@ -254,6 +283,20 @@ body{
 
       .foo-text {
         width: 300px;
+      }
+    }
+  }
+
+  //about page
+  .about-page {
+    .safe {
+      padding: 50px 50px;
+
+      h2 {
+        font-size: 3.5rem;
+      }
+      p{
+        font-size: 1.3rem;
       }
     }
   }
@@ -276,7 +319,7 @@ body{
   .header {
     height: 600px;
 
-    h2 {
+    h1 {
       bottom:-10%;
       font-size: 5rem;
       width: 800px;
@@ -288,11 +331,6 @@ body{
     flex-direction: row-reverse;
     justify-content: space-around;
 
-    
-    // .foo-s{
-    //   padding-right: 30px;
-    // }
-
     .foo-break {
       display: flex;
       flex-direction: row;
@@ -302,6 +340,63 @@ body{
       }
       .foo-social{
         width: 300px;
+      }
+    }
+  }
+
+  //about page
+  .about-page {
+    .safe {
+      width: 900px;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 50px 50px;
+
+      h2{
+        font-size: 4rem;
+      }
+      p{
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  //about page
+  .about-page {
+    .safe {
+      width: 1200px;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 50px 50px;
+
+      h2{
+        font-size: 4rem;
+      }
+      p{
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 2500px) {
+
+  //about page
+  .about-page {
+    .safe {
+      width: 2000px;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 50px 50px;
+
+      h2 {
+        font-size: 6rem;
+      }
+
+      p {
+        font-size: 2.5rem;
       }
     }
   }
