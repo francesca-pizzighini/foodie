@@ -9,7 +9,8 @@ function Recipe({}) {
 
   const apiKey = "23cbe0f3104f4244a078fac7b68043b4";
   const apiKey2 = "103455f1ad5d46229f01cfa6b9f7bfa1";
-  const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey2}&includeNutrition=true`;
+  const apiKey3 = "a6a5b84965ea497ab4627ac7137413f4"
+  const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey3}&includeNutrition=true`;
 
   const [recipeData, setRecipeData] = useState({})
   const [ingredients, setIngredients] = useState([])
