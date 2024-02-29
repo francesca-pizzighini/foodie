@@ -5,8 +5,8 @@ import Footer from "../components/footer"
 import axios from "axios"
 import { useParams } from "react-router-dom"
 
-import apiKey from "../key"
-import { apiKey2, apiKey3 } from "../key"
+import apiKey from "../apiKey"
+import { apiKey2, apiKey3 } from "../apiKey"
 
 function Recipe({}) {
   const recipeId = useParams().recipeId
