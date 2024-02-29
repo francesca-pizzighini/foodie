@@ -27,6 +27,8 @@ function RandomRecipeApiView() {
                         id={recipe.id}
                         image={recipe.image}
                         title={recipe.title}
+                        vegan={recipe.vegan}
+                        glutenFree={recipe.glutenFree}
                     />
                 </Link>
             ))}

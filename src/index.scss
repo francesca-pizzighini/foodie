@@ -26,11 +26,6 @@ a:-webkit-any-link{
     font-weight: 700;
     padding-top: 30px;
   }
-  p {
-    font-size: 1.3rem;
-    font-weight: 200;
-    padding-top: 10px;
-  }
 }
 
 //card
@@ -66,6 +61,8 @@ a:-webkit-any-link{
         }
         p{
           font-size: 1rem;
+          font-weight: 200;
+          color: $dark-color;
         }
       }
     }
@@ -128,17 +125,6 @@ a:-webkit-any-link{
 }
 
 //header
-.home-img {
-  background-image: url("https://images.unsplash.com/photo-1532768907235-78653b7dc71d?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-position: 50% 60% !important;
-}
-.team-img {
-  background-image: url("https://images.unsplash.com/photo-1573496774426-fe3db3dd1731?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-}
-.food-img {
-  background-image: url("https://images.unsplash.com/photo-1532768778661-1b347c5f02ce?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-}
-
 .header{
   background-size: cover;
   background-position: center center;
@@ -167,6 +153,7 @@ a:-webkit-any-link{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
 
   .foo{
     display: flex;
@@ -227,19 +214,16 @@ a:-webkit-any-link{
         .c-a-img {
           height: 200px;
         }
-        .c-a-food{
-          background-image: url("https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-        }
-        .c-a-health{
-          background-image: url("https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-        }
-        .c-a-enviroment {
-          background-image: url("https://images.unsplash.com/photo-1552799446-159ba9523315?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-        }
         .c-a-text {
           height: 200px;
         }
       }
+    }
+
+    .about-bio > p{
+      padding-top: 20px;
+      font-size: 1.3rem;
+      font-weight: 200;
     }
   }
 }
@@ -249,13 +233,20 @@ a:-webkit-any-link{
 .safe{
   .random-recipe {
     .card {
+      .c-img{
+        height: 200px;
+      }
       .c-text {
-        min-height: 150px;
+        min-height: 180px;
   
         #card-title {
+          padding: 10px 15px ;
           color: $dark-color;
           font-size: 1.2rem;
-          text-decoration: none;
+          font-weight: 500;
+        }
+        p{
+          padding: 0 15px;
         }
       }
     }
@@ -321,7 +312,7 @@ a:-webkit-any-link{
   }
 
   //about page
-    .about-page{
+  .about-page{
     .safe{
       //card-about
       .card-about-container {
@@ -330,6 +321,9 @@ a:-webkit-any-link{
             height: 250px;
           }
         }
+      }
+      .about-bio>p {
+        font-size: 1.4rem;
       }
     }
   }      
@@ -418,6 +412,15 @@ a:-webkit-any-link{
       }
     }
   }
+
+  //about page
+  .about-page {
+    .safe {
+      .about-bio>p {
+        font-size: 1.4rem;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -487,6 +490,14 @@ a:-webkit-any-link{
       }
     }
   }
+  //about page
+  .about-page {
+    .safe {
+      .about-bio>p {
+        font-size: 1.4rem;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -508,10 +519,19 @@ a:-webkit-any-link{
     .card-container{
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+      align-items: start;
     
       .card {
         width: 350px;
+      }
+    }
+  }
+
+  //about page
+  .about-page {
+    .safe {
+      .about-bio>p {
+        font-size: 1.5rem;
       }
     }
   }
@@ -537,10 +557,19 @@ a:-webkit-any-link{
     .card-container{
       flex-direction: row;
       justify-content: space-araund;
-      align-items: center;
+      align-items: start;
     
       .card {
         width: 450px;
+      }
+    }
+  }
+
+  //about page
+  .about-page {
+    .safe {
+      .about-bio>p {
+        font-size: 1.6rem;
       }
     }
   }

@@ -1,9 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-
 import axios from "axios"
 
-const apiKey = "23cbe0f3104f4244a078fac7b68043b4"
-const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian&cuisine=asian`
+import apiKey from "../../key";
+import { apiKey2, apiKey3 } from "../../key";
+
+const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey3}&diet=vegetarian&cuisine=asian`
 
 const config = {
     header: {

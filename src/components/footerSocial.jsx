@@ -1,4 +1,4 @@
-import { HashLink, HashLink as Link } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 
 import foodie from "../assets/img/foodie.png"
 import fbLogo from "../assets/img/facebook-logo.png"

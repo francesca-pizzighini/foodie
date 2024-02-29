@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react"
 import Navbar from "../components/navbar"
+import Header from "../components/header"
+import Footer from "../components/footer"
 import axios from "axios"
 import { useParams } from "react-router-dom"
 
+import apiKey from "../key"
+import { apiKey2, apiKey3 } from "../key"
+
 function Recipe({}) {
   const recipeId = useParams().recipeId
-  
 
-  const apiKey = "23cbe0f3104f4244a078fac7b68043b4";
-  const apiKey2 = "103455f1ad5d46229f01cfa6b9f7bfa1";
-  const apiKey3 = "a6a5b84965ea497ab4627ac7137413f4"
   const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey3}&includeNutrition=true`;
+  // const defurl = `https://api.spoonacular.com/recipes/633091/information?apiKey=${apiKey3}&includeNutrition=true`;
 
   const [recipeData, setRecipeData] = useState({})
   const [ingredients, setIngredients] = useState([])
@@ -33,15 +35,22 @@ function Recipe({}) {
   console.log(recipeData)
   console.log(ingredients)
   console.log(nutrients)
-  // console.log(recipeData.nutrition.nutrients)
 
 
   return (
     <div>
         <Navbar/>
-        <img
-          src={recipeData.image}
+        <Header
+          url={recipeData.image}
         />
+        {/* <div
+          style={{
+            backgroundImage: `url(${recipeData.image})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            width: "600px",
+            height: "600px"}}
+        ></div> */}
         <div>
           <h2>{recipeData.title}</h2>
           <h4>{recipeData.vegan ? "Vegan" : "Not Vegan"}</h4>
@@ -56,13 +65,18 @@ function Recipe({}) {
           <ul>
             {ingredients.map((ingredient) => (
               <li key={ingredient.id}>{ingredient.original}</li>
-            ) )}
+            ))}
           </ul>
 
           <h3>Instructions</h3>
-          <p>{recipeData.instructions}</p>
+          <div
+            dangerouslySetInnerHTML={{__html: recipeData.instructions}}  
+          ></div>
 
         </div>
+
+        <Footer/>
+
     </div>
   )
 }

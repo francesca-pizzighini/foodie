@@ -13,7 +13,7 @@ function App() {
       <Navbar/>
 
       <Header
-        img="home-img"
+        url="https://images.unsplash.com/photo-1532768907235-78653b7dc71d?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         text="Discover a new world of healty recipes"
       />
 
@@ -21,8 +21,6 @@ function App() {
         <h2>Find your next meal</h2>
           <RandomRecipeApiView />
       </div>
-
-      <div style={{height: "100px"}}></div>
 
       <Footer/>
     </>

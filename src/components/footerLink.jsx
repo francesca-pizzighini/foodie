@@ -1,4 +1,4 @@
-import { HashLink, HashLink as Link } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 
 function FooterLink({text, linkText, routerText}) {
   return (

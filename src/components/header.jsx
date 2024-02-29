@@ -1,8 +1,9 @@
 
-function Header({img, text}) {
+function Header({url, text}) {
   return (
     <div 
-        className={`header ${img}`}
+        className="header"
+        style={{backgroundImage: `url(${url})`}}
     >
         <h1
             className={`satisfy-regular`}
