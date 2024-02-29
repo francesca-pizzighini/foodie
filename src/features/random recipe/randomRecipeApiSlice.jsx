@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import apiKey from "../../key";
-import { apiKey2, apiKey3 } from "../../key";
+import apiKey from "../../apiKey.jsx";
+import { apiKey2, apiKey3 } from "../../apiKey.jsx";
 
 
 import axios from "axios"
