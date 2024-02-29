@@ -3,6 +3,7 @@ import img from "../../assets/img/img.jpg"
 import { useEffect } from "react";
 import { fetchRandomRecipes } from "./randomRecipeApiSlice";
 import CardRandom from "../../components/cardRandom";
+import { Link } from "react-router-dom";
 
 function RandomRecipeApiView() {
     const dispatch = useDispatch();
@@ -17,12 +18,17 @@ function RandomRecipeApiView() {
     return (
         <div className="card-container random-recipe">
             {randomRecipe.map(recipe => (
-                <CardRandom
+                <Link
+                    to={`/recipes/${recipe.id}`}
                     key={recipe.id}
-                    id={recipe.id}
-                    image={recipe.image}
-                    title={recipe.title}
-                />
+                >
+                    <CardRandom
+                        key={recipe.id}
+                        id={recipe.id}
+                        image={recipe.image}
+                        title={recipe.title}
+                    />
+                </Link>
             ))}
         </div>
     )

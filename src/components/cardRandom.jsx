@@ -10,7 +10,10 @@ function CardRandom({ image, title }) {
 
 
       <div className="c-text">
-          <h3>{title}</h3>
+          <h3
+            id="card-title"
+            style={{textDecoration: "none"}}
+          >{title}</h3>
       </div>
 
     </div>

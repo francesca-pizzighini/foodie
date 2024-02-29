@@ -14,6 +14,9 @@ body{
   background-color: $light-color;
   color: $dark-color;
 }
+a:-webkit-any-link{
+  text-decoration: none;
+}
 .safe {
   padding: 30px 10px;
   margin: 0px auto;
@@ -243,10 +246,18 @@ body{
 
 
 //randomrecipe
-.random-recipe{
-  .card{
-    .c-text{
-      height: 150px;
+.safe{
+  .random-recipe {
+    .card {
+      .c-text {
+        min-height: 150px;
+  
+        #card-title {
+          color: $dark-color;
+          font-size: 1.2rem;
+          text-decoration: none;
+        }
+      }
     }
   }
 }
