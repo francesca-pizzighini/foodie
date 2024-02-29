@@ -2,11 +2,11 @@
 
 function CardAbout({img, textH3, textP}) {
   return (
-    <div className="card-about">
+    <div className="card card-about">
         <div
-            className={`c-a-img ${img}`}
+            className={`c-img c-a-img ${img}`}
         ></div>
-        <div className="c-a-text">
+        <div className="c-text c-a-text">
             <h3>{textH3}</h3>
             <p>{textP}</p>
         </div>

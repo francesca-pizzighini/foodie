@@ -16,7 +16,7 @@ function About() {
         <div className="safe">
           <h2>Our mission</h2>
 
-          <div className="card-about-container">
+          <div className="card-container card-about-container">
             {/* cards */}
             <CardAbout
               img="c-a-food"

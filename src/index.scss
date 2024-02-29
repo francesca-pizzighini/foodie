@@ -1,5 +1,6 @@
 @import "./variables.scss";
 
+//general
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +8,7 @@
 
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-style: normal;
-
-  
+  font-style: normal;  
 }
 body{
   background-color: $light-color;
@@ -31,12 +30,43 @@ body{
   }
 }
 
+//card
+.safe{
+  .card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-.dark-color{
-  color: $dark-color;
-}
-.light-color {
-  color: $light-color;
+    .card{
+      width: 300px;
+      border-radius: 20px;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: column;
+
+      .c-img{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-size: cover;
+        background-position: center center;
+      }
+      .c-text{
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        padding: 5px 10px;
+        border-bottom: 3px solid $brown;
+        border-left: 1px solid $brown;
+        border-right: 1px solid $brown;
+
+        h3{
+          font-size: 1.6rem;
+        }
+        p{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
 }
 
 
@@ -185,42 +215,14 @@ body{
 }
 
 
-
 //about page
 .about-page{
   .safe{
-    // padding: 30px 10px;
-
-    // h2{
-    //   font-size: 2.5rem;
-    //   font-weight: 700;
-    //   padding-top: 30px;
-    // }
-    // p{
-    //   font-size: 1.3rem;
-    //   font-weight: 200;
-    //   padding-top: 10px;
-    // }
-
     //card-about 
     .card-about-container{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
       .card-about {
-        width: 300px;
-        border-radius: 20px;
-        margin: 30px auto;
-        display: flex;
-        flex-direction: column;
-    
         .c-a-img {
-          border-top-left-radius: 20px;
-          border-top-right-radius: 20px;
           height: 200px;
-          background-size: cover;
-          background-position: center center;
         }
         .c-a-food{
           background-image: url("https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
@@ -233,21 +235,6 @@ body{
         }
         .c-a-text {
           height: 200px;
-          border-bottom-left-radius: 20px;
-          border-bottom-right-radius: 20px;
-          padding: 5px 10px;
-          border-bottom: 3px solid $brown;
-          border-left: 1px solid $brown;
-          border-right: 1px solid $brown;
-
-    
-          h3 {
-            font-size: 1.6rem;
-          }
-    
-          p {
-            font-size: 1rem;
-          }
         }
       }
     }
@@ -255,8 +242,14 @@ body{
 }
 
 
-
-
+//randomrecipe
+.random-recipe{
+  .card{
+    .c-text{
+      height: 150px;
+    }
+  }
+}
 
 
 
@@ -270,6 +263,26 @@ body{
 
     h2 {
       font-size: 3rem;
+    }
+
+    .card-container{
+      .card{
+        width: 400px;
+
+        .c-img{
+          height: 300px;
+        }
+
+        .c-text{
+
+          h3{
+            font-size: 2rem;
+          }
+          p{
+            font-size: 1.3rem;
+          }
+        }
+      }
     }
   }
 
@@ -297,27 +310,13 @@ body{
   }
 
   //about page
-  .about-page{
+    .about-page{
     .safe{
       //card-about
       .card-about-container {
         .card-about {
-          width: 400px;
-    
-          .c-a-img {
-            height: 300px;
-          }
-    
           .c-a-text {
             height: 250px;
-    
-            h3 {
-              font-size: 2rem;
-            }
-    
-            p {
-              font-size: 1.3rem;
-            }
           }
         }
       }
@@ -352,6 +351,25 @@ body{
     p {
       font-size: 1.3rem;
     }
+
+    .card-container{
+      .card{
+        width: 500px;
+
+        .c-img{
+          height: 300px;
+        }
+        .c-text{
+          h3{
+            font-size: 2rem;
+          }
+          p{
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+
   }
 
   //navbar
@@ -389,32 +407,6 @@ body{
       }
     }
   }
-
-  //about page
-  .about-page {
-    .safe{
-      //card-about
-      .card-about-container {
-        .card-about {
-          width: 500px;
-    
-          .c-a-img {
-            height: 300px;
-          }
-    
-          .c-a-text {
-            h3 {
-              font-size: 2rem;
-            }
-    
-            p {
-              font-size: 1.3rem;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -431,6 +423,16 @@ body{
 
     p {
       font-size: 1.4rem;
+    }
+    
+    .card-container{
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    
+      .card {
+        width: 250px;
+      }
     }
   }
 
@@ -474,22 +476,6 @@ body{
       }
     }
   }
-
-  //about page
-  .about-page {
-    .safe{
-      //card-about
-      .card-about-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    
-        .card-about {
-          width: 250px;
-        }
-      }
-    }
-  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -507,20 +493,14 @@ body{
     p {
       font-size: 2rem;
     }
-  }
 
-  //about page
-  .about-page {
-    .safe{
-      //card-about
-      .card-about-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+    .card-container{
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
     
-        .card-about {
-          width: 350px;
-        }
+      .card {
+        width: 350px;
       }
     }
   }
@@ -542,20 +522,14 @@ body{
     p {
       font-size: 2.5rem;
     }
-  }
 
-  //about page
-  .about-page {
-    .safe{
-      //card-about
-      .card-about-container {
-        flex-direction: row;
-        justify-content: space-araund;
-        align-items: center;
+    .card-container{
+      flex-direction: row;
+      justify-content: space-araund;
+      align-items: center;
     
-        .card-about {
-          width: 450px;
-        }
+      .card {
+        width: 450px;
       }
     }
   }
