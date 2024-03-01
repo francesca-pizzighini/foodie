@@ -1,10 +1,11 @@
 import Header from "../components/header"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
+import CardRecipe from "../components/cardRecipe"
+
 import { useState, useId, useEffect } from "react"
-import axios from "axios"
-import CardRandom from "../components/cardRandom"
 import { HashLink } from "react-router-hash-link"
+import axios from "axios"
 
 function Recipes() { 
   const id = useId()
@@ -69,7 +70,6 @@ function Recipes() {
   useEffect(() => {
     (async () => {
       try{
-        console.log(url)
         const response = await axios.get(url)
         const data = await response.data.results
         setRecipes(data)
@@ -87,10 +87,6 @@ function Recipes() {
     })()
   }, [searchStart])
 
-  console.log(formData)
-  console.log(recipes)
-  console.log(diet)
-
   return (
     <div>
         <Navbar/>
@@ -103,6 +99,7 @@ function Recipes() {
         <div
           className="safe search-bar"
         >
+
           <div
             className="bar"
           >
@@ -115,6 +112,7 @@ function Recipes() {
               className="poppins-extralight"
             >
             </input> 
+
             <button 
               onClick={handleSearchStart}
             >
@@ -174,6 +172,7 @@ function Recipes() {
                   htmlFor={id + "-isVegan"}
                   className="poppins-extralight"
                 >Vegan</label>
+
                 <input
                   type="checkbox"
                   name="isVegan"
@@ -188,6 +187,7 @@ function Recipes() {
                   htmlFor={id + "-isGlutenFree"}
                   className="poppins-extralight"
                 >Gluten free</label>
+
                 <input
                   type="checkbox"
                   name="isGlutenFree"
@@ -198,7 +198,6 @@ function Recipes() {
               </div>
             </div>
           </div>
-
         </div>
 
         <div
@@ -212,7 +211,7 @@ function Recipes() {
                 to={`/recipes/${recipe.id}#navbar`}
                 key={recipe.id}
               >
-                <CardRandom
+                <CardRecipe
                   key={recipe.id}
                   id={recipe.id}
                   image={recipe.image}
@@ -222,10 +221,6 @@ function Recipes() {
             ))}
           </div>
         </div>
-        
-        <div 
-          style={{height: "100px"}}
-        ></div>
 
         <Footer/>
     </div>

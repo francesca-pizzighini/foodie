@@ -1,4 +1,3 @@
-
 function Header({url, text}) {
   return (
     <div 

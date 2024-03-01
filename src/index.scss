@@ -31,7 +31,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;  
@@ -167,6 +166,7 @@ a:-webkit-any-link{
     background-color: transparent;
     display: flex;
     align-items: center;
+
     img{
       background-color: transparent;
       height: 50px;
@@ -271,7 +271,6 @@ a:-webkit-any-link{
         }
       }
     }
-
     .about-bio > p{
       padding-top: 20px;
       font-size: 1.3rem;
@@ -445,9 +444,7 @@ a:-webkit-any-link{
         .c-img{
           height: 300px;
         }
-
         .c-text{
-
           h3{
             font-size: 2rem;
           }
@@ -511,6 +508,7 @@ a:-webkit-any-link{
       button{
         height: 60px;
         width: 60px;
+
         svg{
           width: 40px;
           height: 40px;
@@ -526,6 +524,7 @@ a:-webkit-any-link{
       }
       .check{
         width: 200px;
+
         div{
           width: 200px;
           
@@ -566,6 +565,7 @@ a:-webkit-any-link{
     h2 {
       font-size: 3.5rem;
     }
+
     h3{
       font-size: 2.5rem;
     }
@@ -613,7 +613,6 @@ a:-webkit-any-link{
         }
       }
     }
-
   }
 
   //navbar
@@ -670,7 +669,6 @@ a:-webkit-any-link{
         font-size: 2rem;
         padding: 10px;
       }
-
       button {
         height: 60px;
         width: 60px;
@@ -682,7 +680,6 @@ a:-webkit-any-link{
         }
       }
     }
-
     .search-organization {
       width: 600px;
       margin-left: auto;
@@ -697,7 +694,6 @@ a:-webkit-any-link{
         font-size: 1.2rem;
         margin-right: 50px;
       }
-
       .check {
         width: 200px;
         div {
@@ -707,7 +703,6 @@ a:-webkit-any-link{
             width: 160px;
             font-size: 1.2rem;
           }
-
           input {
             width: 20px;
             height: 20px;
@@ -733,7 +728,6 @@ a:-webkit-any-link{
     h3 {
       font-size: 3rem;
     }
-
     h4 {
       font-size: 1.6rem;
 
@@ -741,7 +735,6 @@ a:-webkit-any-link{
         font-size: 1.6rem;
       }
     }
-
     ul,
     ol {
       li {
@@ -758,11 +751,9 @@ a:-webkit-any-link{
         }
       }
     }
-
     p {
       font-size: 1.5rem;
     }
-    
     .card-container{
       flex-direction: row;
       justify-content: space-between;
@@ -814,6 +805,7 @@ a:-webkit-any-link{
       }
     }
   }
+
   //about page
   .about-page {
     .safe {
@@ -832,7 +824,6 @@ a:-webkit-any-link{
         font-size: 2rem;
         padding: 10px;
       }
-
       button {
         height: 60px;
         width: 60px;
@@ -844,7 +835,6 @@ a:-webkit-any-link{
         }
       }
     }
-
     .search-organization {
       width: 800px;
       flex-direction: row;
@@ -857,7 +847,6 @@ a:-webkit-any-link{
         font-size: 1.2rem;
         margin-right: 50px;
       }
-
       .check {
         width: 200px;
 
@@ -890,11 +879,9 @@ a:-webkit-any-link{
     h2 {
       font-size: 5rem;
     }
-
     h3 {
       font-size: 3rem;
     }
-
     h4 {
       font-size: 1.6rem;
 
@@ -902,7 +889,6 @@ a:-webkit-any-link{
         font-size: 1.6rem;
       }
     }
-
     ul,
     ol {
       li {
@@ -919,11 +905,9 @@ a:-webkit-any-link{
         }
       }
     }
-
     p {
       font-size: 2rem;
     }
-
     .card-container{
       flex-direction: row;
       justify-content: space-between;
@@ -953,7 +937,6 @@ a:-webkit-any-link{
         font-size: 2rem;
         padding: 10px;
       }
-
       button {
         height: 60px;
         width: 60px;
@@ -965,7 +948,6 @@ a:-webkit-any-link{
         }
       }
     }
-
     .search-organization {
       width: 1100px;
       flex-direction: row;
@@ -978,7 +960,6 @@ a:-webkit-any-link{
         font-size: 1.2rem;
         margin-right: 50px;
       }
-
       .check {
         width: 200px;
 
@@ -1015,15 +996,13 @@ a:-webkit-any-link{
     h3 {
       font-size: 3rem;
     }
-
     h4 {
-      font: 1.6rem;
+      font-size: 1.6rem;
 
       span {
         font-size: 1.6rem;
       }
     }
-
     ul,
     ol {
       li {
@@ -1040,11 +1019,9 @@ a:-webkit-any-link{
         }
       }
     }
-
     p {
       font-size: 2.5rem;
     }
-
     .card-container{
       flex-direction: row;
       justify-content: space-araund;
@@ -1074,7 +1051,6 @@ a:-webkit-any-link{
         font-size: 2rem;
         padding: 10px;
       }
-
       button {
         height: 60px;
         width: 60px;
@@ -1086,7 +1062,6 @@ a:-webkit-any-link{
         }
       }
     }
-
     .search-organization {
       width: 1100px;
       margin-left: auto;
@@ -1101,7 +1076,6 @@ a:-webkit-any-link{
         font-size: 1.2rem;
         margin-right: 50px;
       }
-
       .check {
         width: 200px;
 
@@ -1112,7 +1086,6 @@ a:-webkit-any-link{
             width: 160px;
             font-size: 1.2rem;
           }
-
           input {
             width: 20px;
             height: 20px;

@@ -1,11 +1,9 @@
 import Navbar from "./components/navbar.jsx"
 import Header from "./components/header.jsx"
 import Footer from './components/footer.jsx'
-
 import RandomRecipeApiView from './features/random recipe/randomRecipeApiView.jsx'
 
 function App() {
-
   return (
     <>
       <Navbar/>

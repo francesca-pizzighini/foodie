@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 export default defineConfig({
   plugins: [react()],
   define: {
-    // env variables from.env file
+    // env variables from .env file
     "process.env.VITE_API_KEY": JSON.stringify(process.env.VITE_API_KEY),
   },
 });

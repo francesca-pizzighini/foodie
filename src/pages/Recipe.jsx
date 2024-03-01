@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react"
 import Navbar from "../components/navbar"
 import Header from "../components/header"
 import Footer from "../components/footer"
-import axios from "axios"
-import { useParams } from "react-router-dom"
-import {v4 as uuidv4} from 'uuid';
 
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import axios from "axios"
+import {v4 as uuidv4} from 'uuid';
 
 
 function Recipe({}) {
@@ -18,7 +18,6 @@ function Recipe({}) {
   const apiKey5 = import.meta.env.VITE_API_KEY5
 
   const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}&includeNutrition=true`;
-  // const defurl = `https://api.spoonacular.com/recipes/633091/information?apiKey=${apiKey3}&includeNutrition=true`;
 
   const [recipeData, setRecipeData] = useState({})
   const [ingredients, setIngredients] = useState([])
@@ -38,25 +37,14 @@ function Recipe({}) {
     })()
   }, [])
 
-  console.log(recipeData)
-  console.log(ingredients)
-  console.log(nutrients)
-
-
   return (
     <div>
         <Navbar/>
+
         <Header
           url={recipeData.image}
         />
-        {/* <div
-          style={{
-            backgroundImage: `url(${recipeData.image})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center center",
-            width: "600px",
-            height: "600px"}}
-        ></div> */}
+
         <div className="safe">
           <h2>{recipeData.title}</h2>
           <h4>{recipeData.vegan ? "Vegan" : "Not Vegan"}</h4>
@@ -89,7 +77,6 @@ function Recipe({}) {
         </div>
 
         <Footer/>
-
     </div>
   )
 }

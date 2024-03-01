@@ -1,5 +1,4 @@
-
-function CardRandom({ image, title, vegan, glutenFree }) {
+function CardRecipe({ image, title, vegan, glutenFree }) {
   return (
     <div className="card">
       
@@ -24,4 +23,4 @@ function CardRandom({ image, title, vegan, glutenFree }) {
   )
 }
 
-export default CardRandom
+export default CardRecipe

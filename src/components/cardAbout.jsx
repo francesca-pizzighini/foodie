@@ -1,5 +1,3 @@
-
-
 function CardAbout({url, textH3, textP}) {
   return (
     <div className="card card-about">

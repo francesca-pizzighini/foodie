@@ -1,7 +1,8 @@
+import CardRecipe from "../../components/cardRecipe";
+
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchRandomRecipes } from "./randomRecipeApiSlice";
-import CardRandom from "../../components/cardRandom";
 import { HashLink } from "react-router-hash-link";
 
 function RandomRecipeApiView() {
@@ -12,8 +13,6 @@ function RandomRecipeApiView() {
         dispatch(fetchRandomRecipes())
     }, [])
 
-    console.log(randomRecipe)
-
     return (
         <div className="card-container random-recipe">
             {randomRecipe.map(recipe => (
@@ -21,7 +20,7 @@ function RandomRecipeApiView() {
                     to={`/recipes/${recipe.id}#navbar`}
                     key={recipe.id}
                 >
-                    <CardRandom
+                    <CardRecipe
                         key={recipe.id}
                         id={recipe.id}
                         image={recipe.image}

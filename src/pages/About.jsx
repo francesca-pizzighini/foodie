@@ -33,7 +33,6 @@ function About() {
               textH3="Climate friends"
               textP="We care about the enviroment everyday, and we wanted to help in our way encouraging people to buy less meat."
             />
-
           </div>
           
           <div className="about-bio">
