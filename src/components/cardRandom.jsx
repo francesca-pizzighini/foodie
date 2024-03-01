@@ -16,8 +16,8 @@ function CardRandom({ image, title, vegan, glutenFree }) {
             id="card-title"
             style={{textDecoration: "none"}}
           >{title}</h3>
-          <p>{vegan ? "Vegan dish" : "Not vegan dish"}</p>
-          <p>{glutenFree ? "Gluten free dish" : "Not gluten free dish"}</p>
+          <p>{vegan ? "Vegan dish" : ""}</p>
+          <p>{glutenFree ? "Gluten free dish" : ""}</p>
       </div>
 
     </div>

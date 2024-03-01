@@ -1,9 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import img from "../../assets/img/img.jpg"
 import { useEffect } from "react";
 import { fetchRandomRecipes } from "./randomRecipeApiSlice";
 import CardRandom from "../../components/cardRandom";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function RandomRecipeApiView() {
     const dispatch = useDispatch();
@@ -18,8 +17,8 @@ function RandomRecipeApiView() {
     return (
         <div className="card-container random-recipe">
             {randomRecipe.map(recipe => (
-                <Link
-                    to={`/recipes/${recipe.id}`}
+                <HashLink
+                    to={`/recipes/${recipe.id}#navbar`}
                     key={recipe.id}
                 >
                     <CardRandom
@@ -30,7 +29,7 @@ function RandomRecipeApiView() {
                         vegan={recipe.vegan}
                         glutenFree={recipe.glutenFree}
                     />
-                </Link>
+                </HashLink>
             ))}
         </div>
     )

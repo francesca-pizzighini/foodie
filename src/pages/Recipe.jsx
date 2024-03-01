@@ -4,6 +4,7 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import axios from "axios"
 import { useParams } from "react-router-dom"
+import {v4 as uuidv4} from 'uuid';
 
 
 
@@ -13,7 +14,8 @@ function Recipe({}) {
   const apiKey = import.meta.env.VITE_API_KEY
   const apiKey2 = import.meta.env.VITE_API_KEY2
   const apiKey3 = import.meta.env.VITE_API_KEY3
-
+  const apiKey4 = import.meta.env.VITE_API_KEY4
+  const apiKey5 = import.meta.env.VITE_API_KEY5
 
   const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}&includeNutrition=true`;
   // const defurl = `https://api.spoonacular.com/recipes/633091/information?apiKey=${apiKey3}&includeNutrition=true`;
@@ -74,7 +76,7 @@ function Recipe({}) {
           <h3>Ingredients</h3>
           <ul>
             {ingredients.map((ingredient) => (
-              <li key={ingredient.id}>{ingredient.original}</li>
+              <li key={uuidv4() + ingredient.id}>{ingredient.original}</li>
             ))}
           </ul>
 

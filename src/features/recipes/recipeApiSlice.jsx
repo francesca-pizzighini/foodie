@@ -5,6 +5,7 @@ import axios from "axios"
 const apiKey = import.meta.env.VITE_API_KEY
 const apiKey2 = import.meta.env.VITE_API_KEY2
 const apiKey3 = import.meta.env.VITE_API_KEY3
+const apiKey4 = import.meta.env.VITE_API_KEY4
 
 const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian&cuisine=asian`
 

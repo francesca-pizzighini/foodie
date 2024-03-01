@@ -1,5 +1,3 @@
-import './App.scss'
-
 import Navbar from "./components/navbar.jsx"
 import Header from "./components/header.jsx"
 import Footer from './components/footer.jsx'
