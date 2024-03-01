@@ -5,13 +5,17 @@ import Footer from "../components/footer"
 import axios from "axios"
 import { useParams } from "react-router-dom"
 
-import apiKey from "../apiKey.jsx"
-import { apiKey2, apiKey3 } from "../apiKey.jsx"
+
 
 function Recipe({}) {
   const recipeId = useParams().recipeId
 
-  const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey3}&includeNutrition=true`;
+  const apiKey = import.meta.env.VITE_API_KEY
+  const apiKey2 = import.meta.env.VITE_API_KEY2
+  const apiKey3 = import.meta.env.VITE_API_KEY3
+
+
+  const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}&includeNutrition=true`;
   // const defurl = `https://api.spoonacular.com/recipes/633091/information?apiKey=${apiKey3}&includeNutrition=true`;
 
   const [recipeData, setRecipeData] = useState({})
@@ -76,7 +80,8 @@ function Recipe({}) {
 
           <h3>Instructions</h3>
           <div
-            dangerouslySetInnerHTML={{__html: recipeData.instructions}}  
+            dangerouslySetInnerHTML={{__html: recipeData.instructions}} 
+            className="instructions" 
           ></div>
 
         </div>

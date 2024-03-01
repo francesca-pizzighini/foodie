@@ -1,10 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios"
 
-import apiKey from "../../apiKey.jsx";
-import { apiKey2, apiKey3 } from "../../apiKey.jsx";
 
-const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey3}&diet=vegetarian&cuisine=asian`
+const apiKey = import.meta.env.VITE_API_KEY
+const apiKey2 = import.meta.env.VITE_API_KEY2
+const apiKey3 = import.meta.env.VITE_API_KEY3
+
+const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian&cuisine=asian`
 
 const config = {
     header: {

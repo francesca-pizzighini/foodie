@@ -1,17 +1,19 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import apiKey from "../../apiKey.jsx";
-import { apiKey2, apiKey3 } from "../../apiKey.jsx";
-
-
 import axios from "axios"
 
 
-const url = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey3}&number=3&include-tags=vegetarian`
+
+const apiKey = import.meta.env.VITE_API_KEY
+const apiKey2 = import.meta.env.VITE_API_KEY2
+const apiKey3 = import.meta.env.VITE_API_KEY3
+
+
+const url = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey}&number=3&include-tags=vegetarian`
 
 const config = {
     header: {
         "Content-Type": "application/json",
-        "X-API-Key": apiKey3,
+        "X-API-Key": apiKey,
     }
 };
 

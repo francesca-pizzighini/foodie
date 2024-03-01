@@ -55,6 +55,18 @@ a:-webkit-any-link{
   ul{
     list-style-type: circle;
   }
+  .instructions{
+    p{
+      font-size: 1.2rem;
+      font-weight: 200;
+      padding-top: 10px;
+      
+      span{
+        font-size: 1.2rem;
+        font-weight: 200;
+      }
+    }
+  }
 }
 
 //card
@@ -311,6 +323,15 @@ a:-webkit-any-link{
         font-size: 1.3rem;
       }
     }
+    .instructions {
+      p{
+        font-size: 1.3rem;
+        
+        span {
+          font-size: 1.3rem;
+        }
+      }
+    }
 
     .card-container{
       .card{
@@ -410,6 +431,15 @@ a:-webkit-any-link{
     ul, ol{
       li{
         font-size: 1.3rem;
+      }
+    }
+    .instructions {
+      p{
+        font-size: 1.3rem;
+      
+        span {
+          font-size: 1.3rem;
+        }
       }
     }
 
@@ -513,6 +543,15 @@ a:-webkit-any-link{
         font-size: 1.5rem;
       }
     }
+    .instructions {
+      p{
+        font-size: 1.5rem;
+      
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
 
     p {
       font-size: 1.5rem;
@@ -609,6 +648,15 @@ a:-webkit-any-link{
         font-size: 1.5rem;
       }
     }
+    .instructions {
+      p{
+        font-size: 1.5rem;
+      
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
 
     p {
       font-size: 2rem;
@@ -663,6 +711,15 @@ a:-webkit-any-link{
     ol {
       li {
         font-size: 1.5rem;
+      }
+    }
+    .instructions {
+      p{
+        font-size: 1.5rem;
+      
+        span {
+          font-size: 1.5rem;
+        }
       }
     }
 
