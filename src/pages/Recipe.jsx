@@ -51,15 +51,21 @@ function Recipe({}) {
             width: "600px",
             height: "600px"}}
         ></div> */}
-        <div>
+        <div className="safe">
           <h2>{recipeData.title}</h2>
           <h4>{recipeData.vegan ? "Vegan" : "Not Vegan"}</h4>
           <h4>{recipeData.glutenFree ? "Gluten free" : "Not Gluten free"}</h4>
           
           <h3>General information</h3>
-          <h4>Ready in: {recipeData.readyInMinutes} minutes</h4>
-          <h4>Servings: {recipeData.servings}</h4>
-          <h4>Calories: {nutrients.amount} {nutrients.unit}</h4>
+          <h4>Ready in: 
+            <span> {recipeData.readyInMinutes} minutes</span>
+          </h4>
+          <h4>Servings:
+            <span> {recipeData.servings}</span>
+          </h4>
+          <h4>Calories:
+            <span> {Math.ceil(nutrients.amount)} {nutrients.unit}</span>
+          </h4>
 
           <h3>Ingredients</h3>
           <ul>
