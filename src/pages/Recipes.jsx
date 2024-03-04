@@ -1,21 +1,21 @@
-import Header from "../components/header"
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
-import CardRecipe from "../components/cardRecipe"
-import ErrorMessage from "../components/errorMessage"
+import { useState, useId, useEffect } from "react";
+import { HashLink } from "react-router-hash-link";
+import axios from "axios";
 
-import { useState, useId, useEffect } from "react"
-import { HashLink } from "react-router-hash-link"
-import axios from "axios"
+import Header from "../components/header";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
+import CardRecipe from "../components/cardRecipe";
+import ErrorMessage from "../components/errorMessage";
 
 function Recipes() { 
-  const id = useId()
+  const id = useId();
 
-  const apiKey = import.meta.env.VITE_API_KEY
-  const apiKey2 = import.meta.env.VITE_API_KEY2
-  const apiKey3 = import.meta.env.VITE_API_KEY3
-  const apiKey4 = import.meta.env.VITE_API_KEY4
-  const apiKey5 = import.meta.env.VITE_API_KEY5
+  const apiKey = import.meta.env.VITE_API_KEY;
+  const apiKey2 = import.meta.env.VITE_API_KEY2;
+  const apiKey3 = import.meta.env.VITE_API_KEY3;
+  const apiKey4 = import.meta.env.VITE_API_KEY4;
+  const apiKey5 = import.meta.env.VITE_API_KEY5;
 
   const [formData, setFormData] = useState({
     query: "",
@@ -33,10 +33,10 @@ function Recipes() {
   const [recipes, setRecipes] = useState([])
   const [error, setError] = useState(false)
 
-  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey4}&diet=vegetarian${diet}&cuisine=${formData.cuisine}&number=12&query=${formData.query}`
+  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey4}&diet=vegetarian${diet}&cuisine=${formData.cuisine}&number=12&query=${formData.query}`;
 
   function handleChange(e){
-    const { name, value, type, checked } = e.target
+    const { name, value, type, checked } = e.target;
     setDiet(prevDiet => {
       let newDiet = prevDiet;
 
@@ -47,7 +47,7 @@ function Recipes() {
       }
 
       if (name === "isGlutenFree" && checked) {
-        newDiet += ",glutenFree" 
+        newDiet += ",glutenFree" ;
       } else if (name === "isGlutenFree" && !checked) {
         newDiet = newDiet.replace(",glutenFree", "");
       }
@@ -64,18 +64,18 @@ function Recipes() {
   }
 
   function handleSearchStart(e){
-    e.preventDefault()
+    e.preventDefault();
     setSearchStart(formData)
   }
 
   useEffect(() => {
     (async () => {
       try{
-        setError(false)
+        setError(false);
 
-        const response = await axios.get(url)
-        const data = await response.data.results
-        setRecipes(data)
+        const response = await axios.get(url);
+        const data = await response.data.results;
+        setRecipes(data);
 
         setFormData(prevData => {
           return {
@@ -84,9 +84,9 @@ function Recipes() {
           }
         })
 
-      } catch (e) {
-        console.log(e)
-        setError(true)
+      } catch (err) {
+        console.log(err);
+        setError(true);
       }
     })()
   }, [searchStart])
@@ -233,4 +233,4 @@ function Recipes() {
   )
 }
 
-export default Recipes
+export default Recipes;

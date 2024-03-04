@@ -1,7 +1,7 @@
-import Header from "../components/header"
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
-import CardAbout from "../components/cardAbout"
+import Header from "../components/header";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
+import CardAbout from "../components/cardAbout";
 
 function About() {
   return (
@@ -64,4 +64,4 @@ function About() {
   )
 }
 
-export default About
+export default About;

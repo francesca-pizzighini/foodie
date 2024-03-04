@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import randomRecipeApiReducer from "../features/random recipe/randomRecipeApiSlice.jsx"
+import randomRecipeApiReducer from "../features/random recipe/randomRecipeApiSlice.jsx";
 
 const store = configureStore({
     reducer: {
@@ -8,4 +8,4 @@ const store = configureStore({
     }
 })
 
-export default store
+export default store;

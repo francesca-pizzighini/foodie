@@ -6,19 +6,16 @@
   font-weight: 200;
   font-style: normal;
 }
-
 .poppins-medium {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
-
 .poppins-bold {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
-
 .satisfy-regular {
   font-family: "Satisfy", cursive;
   font-weight: 400;
@@ -442,13 +439,11 @@ a:-webkit-any-link{
       color: $green;
       font-weight: 400;
     }
-
     a:hover {
       font-weight: 700;
     }
   }
 }
-
 
 
 
@@ -490,7 +485,6 @@ a:-webkit-any-link{
         }
       }
     }
-
     .card-container{
       .card{
         width: 400px;
@@ -510,6 +504,7 @@ a:-webkit-any-link{
     }
   }
 
+
   //navbar
   .navbar{
     height: 100px;
@@ -522,6 +517,7 @@ a:-webkit-any-link{
     }
   }
   
+  
   //header
   .header {
     height: 450px;
@@ -533,6 +529,7 @@ a:-webkit-any-link{
     }
   }
 
+  
   //about page
   .about-page{
     .safe{
@@ -549,6 +546,7 @@ a:-webkit-any-link{
       }
     }
   }  
+  
   
   //search-bar
   .search-bar{
@@ -595,6 +593,7 @@ a:-webkit-any-link{
     }
   }
 
+  
   //error
   .error{
     .safe{
@@ -616,6 +615,7 @@ a:-webkit-any-link{
   }
 }
 
+
 @media only screen and (min-width: 599px) and (max-width: 699px) {
   //footer
   .footer {
@@ -630,6 +630,7 @@ a:-webkit-any-link{
     }
   }
 }
+
 
 @media only screen and (min-width: 700px) and (max-width: 899px) {
   //general
@@ -669,11 +670,9 @@ a:-webkit-any-link{
         }
       }
     }
-
     p {
       font-size: 1.3rem;
     }
-
     .card-container{
       .card{
         width: 500px;
@@ -693,6 +692,7 @@ a:-webkit-any-link{
     }
   }
 
+
   //navbar
   .navbar {
     height: 100px;
@@ -705,6 +705,7 @@ a:-webkit-any-link{
     }
   }
 
+
   //header
   .header {
     height:500px;
@@ -715,6 +716,7 @@ a:-webkit-any-link{
       width: 600px;
     }
   }
+
 
   //footer
   .footer {
@@ -729,6 +731,7 @@ a:-webkit-any-link{
     }
   }
 
+
   //about page
   .about-page {
     .safe {
@@ -737,6 +740,7 @@ a:-webkit-any-link{
       }
     }
   }
+
 
   //search-bar
   .search-bar {
@@ -790,6 +794,7 @@ a:-webkit-any-link{
     }
   }
 
+
   //error
   .error {
     .safe {
@@ -809,6 +814,7 @@ a:-webkit-any-link{
     }
   }
 }
+
 
 @media only screen and (min-width: 900px) {
   //general
@@ -865,6 +871,7 @@ a:-webkit-any-link{
     }
   }
 
+
   //navbar
   .navbar {
     height: 100px;
@@ -877,6 +884,7 @@ a:-webkit-any-link{
     }
   }
 
+
   //header
   .header {
     height: 600px;
@@ -887,6 +895,7 @@ a:-webkit-any-link{
       width: 800px;
     }
   }
+
 
   //footer
   .footer {
@@ -906,6 +915,7 @@ a:-webkit-any-link{
     }
   }
 
+
   //about page
   .about-page {
     .safe {
@@ -914,6 +924,7 @@ a:-webkit-any-link{
       }
     }
   }
+
 
   //search-bar
   .search-bar {
@@ -967,6 +978,7 @@ a:-webkit-any-link{
     }
   }
 
+
   //error
   .error {
     .safe {
@@ -987,6 +999,7 @@ a:-webkit-any-link{
   }
 }
 
+
 @media only screen and (min-width: 1200px) {
   //general
   .safe {
@@ -998,6 +1011,7 @@ a:-webkit-any-link{
     h2 {
       font-size: 5rem;
     }
+
     h3 {
       font-size: 3rem;
     }
@@ -1041,6 +1055,7 @@ a:-webkit-any-link{
     }
   }
 
+
   //about page
   .about-page {
     .safe {
@@ -1049,6 +1064,7 @@ a:-webkit-any-link{
       }
     }
   }
+
 
   //search-bar
   .search-bar {
@@ -1102,6 +1118,7 @@ a:-webkit-any-link{
     }
   }
 
+  
   //error
   .error {
     .safe {
@@ -1178,6 +1195,7 @@ a:-webkit-any-link{
     }
   }
 
+
   //about page
   .about-page {
     .safe {
@@ -1186,6 +1204,7 @@ a:-webkit-any-link{
       }
     }
   }
+
 
   //search-bar
   .search-bar {
@@ -1240,6 +1259,7 @@ a:-webkit-any-link{
     }
   }
 
+  
   //error
   .error {
     .safe {

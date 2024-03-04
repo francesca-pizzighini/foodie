@@ -1,9 +1,9 @@
 import { HashLink } from 'react-router-hash-link';
 
-import foodie from "../assets/img/foodie.png"
-import fbLogo from "../assets/img/facebook-logo.png"
-import igLogo from "../assets/img/instagram-logo.png"
-import xLogo from "../assets/img/x-logo.png"
+import foodie from "../assets/img/foodie.png";
+import fbLogo from "../assets/img/facebook-logo.png";
+import igLogo from "../assets/img/instagram-logo.png";
+import xLogo from "../assets/img/x-logo.png";
 
 function FooterSocial() {
   return (
@@ -54,4 +54,4 @@ function FooterSocial() {
   )
 }
 
-export default FooterSocial
+export default FooterSocial;

@@ -17,4 +17,4 @@ function FooterLink({text, linkText, routerText}) {
   )
 }
 
-export default FooterLink
+export default FooterLink;

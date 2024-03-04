@@ -1,13 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios"
+import axios from "axios";
 
-const apiKey = import.meta.env.VITE_API_KEY
-const apiKey2 = import.meta.env.VITE_API_KEY2
-const apiKey3 = import.meta.env.VITE_API_KEY3
-const apiKey4 = import.meta.env.VITE_API_KEY4
-const apiKey5 = import.meta.env.VITE_API_KEY5
+const apiKey = import.meta.env.VITE_API_KEY;
+const apiKey2 = import.meta.env.VITE_API_KEY2;
+const apiKey3 = import.meta.env.VITE_API_KEY3;
+const apiKey4 = import.meta.env.VITE_API_KEY4;
+const apiKey5 = import.meta.env.VITE_API_KEY5;
 
-const url = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey4}&number=3&include-tags=vegetarian`
+const url = `https://api.spoonacular.com/recipes/random?apiKey=${apiKey4}&number=3&include-tags=vegetarian`;
 
 const config = {
     header: {
@@ -19,7 +19,7 @@ const config = {
 export const fetchRandomRecipes = createAsyncThunk("recipes/fetchRandomRecipes", () => {
     return axios.get(url)
         .then(response => response.data.recipes)
-})
+});
 
 
 const initialState = {
@@ -48,6 +48,6 @@ const randomRecipeApiSlice = createSlice({
                 state.error = action.error.message;
             });
     }
-})
+});
 
 export default randomRecipeApiSlice.reducer;

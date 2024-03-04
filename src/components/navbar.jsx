@@ -1,17 +1,17 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
-import foodie from "../assets/img/foodie.png"
+import foodie from "../assets/img/foodie.png";
 
 function Navbar() {
   const menuDisplay = ({ isActive }) => {
     if (window.innerWidth > 600) {
-      return {
-        display: "block"
-      }
+        return {
+            display: "block"
+        }
     }else if (window.innerWidth < 600) {
-      return {
-        display: isActive ? "none" : "block"
-      }
+        return {
+            display: isActive ? "none" : "block"
+        }
     }
   }
     
@@ -47,9 +47,9 @@ function Navbar() {
           to={"/about"}
           >
             About{window.innerWidth > 600 ? " the project" : null}
-          </NavLink>
+        </NavLink>
     </nav>
   )
 }
 
-export default Navbar
+export default Navbar;

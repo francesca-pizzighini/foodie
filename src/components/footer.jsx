@@ -1,6 +1,5 @@
-import FooterLink from "./footerLink"
-import FooterSocial from "./footerSocial"
-
+import FooterLink from "./footerLink";
+import FooterSocial from "./footerSocial";
 
 function Footer() {
   return (
@@ -25,4 +24,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default Footer;

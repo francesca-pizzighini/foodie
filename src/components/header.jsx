@@ -11,4 +11,4 @@ function Header({url, text}) {
   )
 }
 
-export default Header
+export default Header;

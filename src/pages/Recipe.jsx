@@ -1,38 +1,37 @@
-import Navbar from "../components/navbar"
-import Header from "../components/header"
-import Footer from "../components/footer"
-
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import axios from "axios"
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 import {v4 as uuidv4} from 'uuid';
 
+import Navbar from "../components/navbar";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 function Recipe({}) {
-  const recipeId = useParams().recipeId
+  const recipeId = useParams().recipeId;
 
-  const apiKey = import.meta.env.VITE_API_KEY
-  const apiKey2 = import.meta.env.VITE_API_KEY2
-  const apiKey3 = import.meta.env.VITE_API_KEY3
-  const apiKey4 = import.meta.env.VITE_API_KEY4
-  const apiKey5 = import.meta.env.VITE_API_KEY5
+  const apiKey = import.meta.env.VITE_API_KEY;
+  const apiKey2 = import.meta.env.VITE_API_KEY2;
+  const apiKey3 = import.meta.env.VITE_API_KEY3;
+  const apiKey4 = import.meta.env.VITE_API_KEY4;
+  const apiKey5 = import.meta.env.VITE_API_KEY5;
 
   const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}&includeNutrition=true`;
 
-  const [recipeData, setRecipeData] = useState({})
-  const [ingredients, setIngredients] = useState([])
-  const [nutrients, setNutrients] = useState([])
+  const [recipeData, setRecipeData] = useState({});
+  const [ingredients, setIngredients] = useState([]);
+  const [nutrients, setNutrients] = useState([]);
 
   useEffect(() => {
     (async () => {
       try{
         const response = await axios.get(url);
         const data = await response.data;
-        setRecipeData(data)
-        setIngredients(data.extendedIngredients)
-        setNutrients(data.nutrition.nutrients[0])
+        setRecipeData(data);
+        setIngredients(data.extendedIngredients);
+        setNutrients(data.nutrition.nutrients[0]);
       } catch (err) {
-        console.log (err)
+        console.log (err);
       }
     })()
   }, [])
@@ -79,6 +78,6 @@ function Recipe({}) {
         <Footer/>
     </div>
   )
-}
+};
 
-export default Recipe
+export default Recipe;

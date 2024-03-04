@@ -14,4 +14,4 @@ function CardAbout({url, textH3, textP}) {
   )
 }
 
-export default CardAbout
+export default CardAbout;
