@@ -31,7 +31,7 @@ function Recipes() {
   const [diet, setDiet] = useState("")
   const [recipes, setRecipes] = useState([])
 
-  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian${diet}&cuisine=${formData.cuisine}&number=3&query=${formData.query}`
+  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian${diet}&cuisine=${formData.cuisine}&number=9&query=${formData.query}`
 
   function handleChange(e){
     const { name, value, type, checked } = e.target
@@ -64,7 +64,6 @@ function Recipes() {
   function handleSearchStart(e){
     e.preventDefault()
     setSearchStart(formData)
-    console.log("searchStart")
   }
 
   useEffect(() => {
@@ -86,6 +85,8 @@ function Recipes() {
       }
     })()
   }, [searchStart])
+
+  console.log(url)
 
   return (
     <div>

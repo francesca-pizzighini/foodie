@@ -11,24 +11,29 @@ import App from "./App.jsx"
 import About from "./pages/About.jsx"
 import Recipes from "./pages/Recipes.jsx"
 import Recipe from "./pages/Recipe.jsx"
+import ErrorPage from "./pages/errorPage.jsx"
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>
+    element: <App/>,
+    errorElement: <ErrorPage/>
   },
   {
     path: "/recipes",
-    element: <Recipes/>
+    element: <Recipes/>,
+    errorElement: <ErrorPage/>
   },
   {
     path: "/recipes/:recipeId",
-    element: <Recipe/>
+    element: <Recipe/>,
+    errorElement: <ErrorPage/>
   },
   {
     path: "/about",
-    element: <About/>
+    element: <About/>,
+    errorElement: <ErrorPage/>
   }
 ])
 
@@ -37,5 +42,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Provider store={store}>
       <RouterProvider router={router} />
     </Provider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )

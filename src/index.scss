@@ -398,6 +398,35 @@ a:-webkit-any-link{
   }
 }
 
+//error
+.error{
+  .safe{
+    padding-left: 20px;
+    h2{
+      line-height: 2.5rem;
+      line-height: 2.5rem;
+      color: $green;
+    }
+    h4{
+      font-size: 1.2rem;
+      font-weight: 400;
+      padding: 15px 0px;
+    }
+    p{
+      font-size: 1.2rem;
+      font-weight: 200;
+
+      a{
+        color: $green;
+        font-weight: 400;
+      }
+      a:hover{
+        font-weight: 700;
+      }
+    }
+  }
+}
+
 
 
 
@@ -432,6 +461,9 @@ a:-webkit-any-link{
         font-size: 1.3rem;
         
         span {
+          font-size: 1.3rem;
+        }
+        a{
           font-size: 1.3rem;
         }
       }
@@ -540,6 +572,23 @@ a:-webkit-any-link{
       }
     }
   }
+
+  //error
+  .error{
+    .safe{
+      h4{
+        font-size: 1.3rem;
+        padding: 20px 0px 10px 0px;
+      }
+      p{
+        font-size: 1.3rem;
+
+        a{
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 599px) and (max-width: 699px) {
@@ -571,10 +620,11 @@ a:-webkit-any-link{
     }
     h4{
       font-size: 1.5rem;
-
-      span{
-        font-size: 1.4rem;
-      }
+    
+    span{
+      font-size: 1.4rem;
+    }
+      
     }
     ul, ol{
       li{
@@ -587,6 +637,9 @@ a:-webkit-any-link{
         font-size: 1.3rem;
       
         span {
+          font-size: 1.3rem;
+        }
+        a{
           font-size: 1.3rem;
         }
       }
@@ -711,6 +764,24 @@ a:-webkit-any-link{
       }
     }
   }
+
+  //error
+  .error {
+    .safe {
+      h4 {
+        font-size: 1.3rem;
+        padding: 20px 0px 10px 0px;
+      }
+
+      p {
+        font-size: 1.3rem;
+
+        a {
+          font-size: 1.3rem;
+        }
+      }
+    }
+        }
 }
 
 @media only screen and (min-width: 900px) {
@@ -747,6 +818,9 @@ a:-webkit-any-link{
         font-size: 1.5rem;
       
         span {
+          font-size: 1.5rem;
+        }
+        a{
           font-size: 1.5rem;
         }
       }
@@ -866,6 +940,24 @@ a:-webkit-any-link{
       }
     }
   }
+
+  //error
+  .error {
+    .safe {
+      h4 {
+        font-size: 1.4rem;
+        padding: 30px 0px 10px 0px;
+      }
+
+      p {
+        font-size: 1.4rem;
+
+        a {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -901,6 +993,9 @@ a:-webkit-any-link{
         font-size: 1.5rem;
       
         span {
+          font-size: 1.5rem;
+        }
+        a{
           font-size: 1.5rem;
         }
       }
@@ -979,6 +1074,24 @@ a:-webkit-any-link{
       }
     }
   }
+
+  //error
+  .error {
+    .safe {
+      h4 {
+        font-size: 1.4rem;
+        padding: 30px 0px 10px 0px;
+      }
+
+      p {
+        font-size: 1.4rem;
+
+        a {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
 }
 
 
@@ -1015,6 +1128,9 @@ a:-webkit-any-link{
         font-size: 1.5rem;
       
         span {
+          font-size: 1.5rem;
+        }
+        a{
           font-size: 1.5rem;
         }
       }
@@ -1090,6 +1206,24 @@ a:-webkit-any-link{
             width: 20px;
             height: 20px;
           }
+        }
+      }
+    }
+  }
+
+  //error
+  .error {
+    .safe {
+      h4 {
+        font-size: 1.4rem;
+        padding: 30px 0px 10px 0px;
+      }
+
+      p {
+        font-size: 1.4rem;
+
+        a {
+          font-size: 1.4rem;
         }
       }
     }
