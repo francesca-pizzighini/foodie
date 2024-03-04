@@ -33,7 +33,7 @@ function Recipes() {
   const [recipes, setRecipes] = useState([])
   const [error, setError] = useState(false)
 
-  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey3}&diet=vegetarian${diet}&cuisine=${formData.cuisine}&number=12&query=${formData.query}`
+  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey4}&diet=vegetarian${diet}&cuisine=${formData.cuisine}&number=12&query=${formData.query}`
 
   function handleChange(e){
     const { name, value, type, checked } = e.target
