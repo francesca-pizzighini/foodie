@@ -1,4 +1,5 @@
 import CardRecipe from "../../components/cardRecipe";
+import ErrorMessage from "../../components/errorMessage";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -8,6 +9,7 @@ import { HashLink } from "react-router-hash-link";
 function RandomRecipeApiView() {
     const dispatch = useDispatch();
     const randomRecipe = useSelector(state => state.randomRecipesApi.recipes)
+    const loadingState = useSelector(state => state.randomRecipesApi)
 
     useEffect(() => {
         dispatch(fetchRandomRecipes())
@@ -15,6 +17,18 @@ function RandomRecipeApiView() {
 
     return (
         <div className="card-container random-recipe">
+            {loadingState.loading && (
+            <div 
+                classname="loading"
+            >
+                <p
+                    style={{
+                        fontSize: "1.4rem",
+                        fontWeight: "200"}}
+                >Loading...</p>
+            </div>)}
+            {!loadingState.loading && loadingState.error ? <ErrorMessage/> : null}
+            
             {randomRecipe.map(recipe => (
                 <HashLink
                     to={`/recipes/${recipe.id}#navbar`}

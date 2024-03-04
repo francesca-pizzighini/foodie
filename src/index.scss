@@ -426,6 +426,28 @@ a:-webkit-any-link{
     }
   }
 }
+.error-message{
+  background-color: rgba($color: red, $alpha: 0.3);
+  border: 1px solid red;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+}
+.error, .error-message{
+  p {
+    font-size: 1.2rem;
+    font-weight: 200;
+
+    a {
+      color: $green;
+      font-weight: 400;
+    }
+
+    a:hover {
+      font-weight: 700;
+    }
+  }
+}
 
 
 
@@ -580,12 +602,15 @@ a:-webkit-any-link{
         font-size: 1.3rem;
         padding: 20px 0px 10px 0px;
       }
-      p{
-        font-size: 1.3rem;
+    }
+  }
+  .error,
+  .error-message {
+    p {
+      font-size: 1.3rem;
 
-        a{
-          font-size: 1.3rem;
-        }
+      a {
+        font-size: 1.3rem;
       }
     }
   }
@@ -772,16 +797,17 @@ a:-webkit-any-link{
         font-size: 1.3rem;
         padding: 20px 0px 10px 0px;
       }
-
-      p {
+    }
+  }
+  .error, .error-message{
+    p {
+      font-size: 1.3rem;
+  
+      a {
         font-size: 1.3rem;
-
-        a {
-          font-size: 1.3rem;
-        }
       }
     }
-        }
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -948,13 +974,14 @@ a:-webkit-any-link{
         font-size: 1.4rem;
         padding: 30px 0px 10px 0px;
       }
-
-      p {
+    }
+  }
+  .error, .error-message{
+    p {
+      font-size: 1.4rem;
+  
+      a {
         font-size: 1.4rem;
-
-        a {
-          font-size: 1.4rem;
-        }
       }
     }
   }
@@ -1082,13 +1109,15 @@ a:-webkit-any-link{
         font-size: 1.4rem;
         padding: 30px 0px 10px 0px;
       }
+    }
+  }
+  .error,
+  .error-message {
+    p {
+      font-size: 1.4rem;
 
-      p {
+      a {
         font-size: 1.4rem;
-
-        a {
-          font-size: 1.4rem;
-        }
       }
     }
   }
@@ -1218,13 +1247,15 @@ a:-webkit-any-link{
         font-size: 1.4rem;
         padding: 30px 0px 10px 0px;
       }
+    }
+  }
+  .error,
+  .error-message {
+    p {
+      font-size: 1.4rem;
 
-      p {
+      a {
         font-size: 1.4rem;
-
-        a {
-          font-size: 1.4rem;
-        }
       }
     }
   }
