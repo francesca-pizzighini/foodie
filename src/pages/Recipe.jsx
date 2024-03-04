@@ -78,6 +78,6 @@ function Recipe({}) {
         <Footer/>
     </div>
   )
-};
+}
 
 export default Recipe;
