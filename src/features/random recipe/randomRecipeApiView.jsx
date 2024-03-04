@@ -19,7 +19,7 @@ function RandomRecipeApiView() {
         <div className="card-container random-recipe">
             {loadingState.loading && (
             <div 
-                classname="loading"
+                className="loading"
             >
                 <p
                     style={{

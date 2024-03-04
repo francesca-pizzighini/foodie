@@ -2,6 +2,7 @@ import Header from "../components/header"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 import CardRecipe from "../components/cardRecipe"
+import ErrorMessage from "../components/errorMessage"
 
 import { useState, useId, useEffect } from "react"
 import { HashLink } from "react-router-hash-link"
@@ -30,8 +31,9 @@ function Recipes() {
   })
   const [diet, setDiet] = useState("")
   const [recipes, setRecipes] = useState([])
+  const [error, setError] = useState(false)
 
-  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian${diet}&cuisine=${formData.cuisine}&number=9&query=${formData.query}`
+  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey3}&diet=vegetarian${diet}&cuisine=${formData.cuisine}&number=12&query=${formData.query}`
 
   function handleChange(e){
     const { name, value, type, checked } = e.target
@@ -69,6 +71,8 @@ function Recipes() {
   useEffect(() => {
     (async () => {
       try{
+        setError(false)
+
         const response = await axios.get(url)
         const data = await response.data.results
         setRecipes(data)
@@ -82,6 +86,7 @@ function Recipes() {
 
       } catch (e) {
         console.log(e)
+        setError(true)
       }
     })()
   }, [searchStart])
@@ -202,6 +207,8 @@ function Recipes() {
         <div
           className="safe"
         >
+          {error ? <ErrorMessage/> : null}
+
           <div
             className="card-container random-recipe"
           >
