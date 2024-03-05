@@ -5,7 +5,7 @@
 Discover new vegetarian and vegan recipes everyday! We have houndreds of healthy and delicious recipes from various cuisine, and you can display only the ones you are interested in. We also have a selector to only show gluten-free recipes AND one for vegan recipes, come and discover your next meal!
 <br>
 <br>
-Try the website <a href= "https://foodie-veggie.netlify.app/recipes">here</a>.
+Try the website <a href= "https://foodie-veggie.netlify.app">here</a>.
 <br>
 Or continue reading about the project <a href= "#the-project">here</a>.
 
@@ -31,7 +31,6 @@ Or continue reading about the project <a href= "#the-project">here</a>.
             <ul>
                 <li><a href="#languages">Languages</a></li>
                 <li><a href="#libraries">Libraries</a></li>
-                <li><a href="#bundler">Bundler</a></li>
                 <li><a href="#free-api">Free API</a></li>
             </ul>
         </li>
@@ -41,7 +40,6 @@ Or continue reading about the project <a href= "#the-project">here</a>.
             <ul>
                 <li><a href="#git-clone">Git Clone</a></li>
                 <li><a href="#install">Install</a></li>
-                <li><a href="#npm-build">Npm build</a></li>
                 <li><a href="#open-the-project">Open the project</a></li>
             </ul>
         </li>
@@ -49,8 +47,9 @@ Or continue reading about the project <a href= "#the-project">here</a>.
         <li>
             <a href="#a-quick-guide-to-use">A quick guide to use</a>
             <ul>
-                <li><a href="#search-for-the-city">Search for the city</a></li>
-                <li><a href="#press-search-button-and-done">Press search button and... Done!</a></li>
+                <li><a href="#home-page">Search for the city</a></li>
+                <li><a href="#search-a-specific-recipe">Search a specific recipe</a></li>
+                <li><a href="#about-page">About page</a></li>
             </ul>
         </li>
         <!--  -->
@@ -92,10 +91,12 @@ Every addictional feature is welcome, especially:
 
 ## Design inspiration
 
-I'm not a good graphic designer, so part of my preparatory work consist of search for inspirational works. For this project i have 2 main source:
+I'm not a good graphic designer, so part of my preparatory work consist of search for inspirational works. For this project I don't have a specific source, but i browsed Pinterest in search for inspiration.
+I would cite:
 
-- The work of a colleage in the Start2Impact University course you can see [here](https://github.com/cristopherturazza/S2I-JS-Advanced/tree/main#best-cities-to-live-house_with_garden) by clicking the link in the readme file. I really like the clear design of it, expecially the upper part of the website with the city photo.
-- It was a pure coincidence, but soon after I had seen my colleague project I visited the [Teleport](https://developers.teleport.org/api/) website to examine the API information. I noticed the structure of the two website were similar, but i liked more the subdivision of the spaces in two column of teleport website.
+- This [layout](https://www.pinterest.it/pin/655836764512991222/) for the design of the navbar
+- This [layout](https://www.pinterest.it/pin/647040671491364971/) fot the website design
+- [Canva](https://www.canva.com) for the logo design
 
 <p align="right"><a href="#top">return to the top</a></p>
 
@@ -107,22 +108,20 @@ To developed this website I used:
 
 - HTML
 - CSS
-- [Bootstrap 5](https://getbootstrap.com)
 - [SASS](https://sass-lang.com)
 - JavaScript
+- [Vite](https://vitejs.dev/guide/)
+- [React](https://react.dev)
 
 ### Libraries
 
-- [Lodash](https://lodash.com/docs/4.17.15#get)
 - [Axios](https://axios-http.com/)
-
-### Bundler
-
-- [Webpack 5](https://webpack.js.org/)
+- [Redux](https://react-redux.js.org)
+- [React routing](https://reactrouter.com/en/main)
 
 ### Free API
 
-- [Teleport](https://developers.teleport.org/api/)
+- [Spoonacular API](https://spoonacular.com/food-api/docs)
 
 <p align="right"><a href="#top">return to the top</a></p>
 
@@ -134,7 +133,7 @@ After the installation open the terminal in your computer and make sure you are 
 ### Git clone
 
 Type in the terminal
-`git clone https://github.com/francesca-pizzighini/find-your-city.git`
+`git clone https://github.com/francesca-pizzighini/foodie.git`
 Then open the project folder in your code editor and make sure the terminal is now indicating this folder.
 
 ### Install
@@ -143,44 +142,32 @@ Type in the terminal
 `npm i `
 to install all the dependencies indicated in the package.json file
 
-### Npm build
-
-Type in the terminal
-`npm run build`
-
 ### Open the project
 
-Now you have two choices:
-
-- open manually the website by double clicking the index.html file in the dist folder
-- type in the terminal `npm run dev`
+Type in the terminal
+`npm run dev`
 
  <p align="right"><a href="#top">return to the top</a></p>
 
 ## A quick guide to use
 
-The website is really simple to use, but I'll illustrate an example to make the situation even clearer.<br>
-First of all open the website [here](https://find-your-dream-city.netlify.app).
+The website is really simple to use, but I'll illustrate how the pages works to make everything even clearer.<br>
+First of all open the website [here](https://foodie-veggie.netlify.app).
 
-### Search for the city
+### Home Page
 
-In the upper part of the website you'll se a search-bar, simply type the name of the city you want to know more about.
-<img src="src/assets/img/search-bar-screenshot.png" alt="this image is a screenshot of the website">
-For the sake of this example we'll search for Edinburgh.
-Don't worry about making typos, the autocomplete system is here to help you. Just click on the name of the city when it'll show up.
-<img src="src/assets/img/searching-edinburgh.png" alt="this image is a screenshot of the website">
+In the homepage will randomly appear 3 vegetarian recipes everytime the page is loaded. This is for everyone who needs inspiration to find the right recipe, or just want a little caos in theri life. <br>
+Every recipe shows name, image and specify if is vegan or gluten free. I thought it wuold be useful fo everyone who need to know those specification and can't use a selector as in recipes page.
 
-### Press search button and... Done!
+### Search a specific recipe
 
-Once the name is fully written in the searchbar press the search button and you'll see the result, easy and quick!
-Let's take a look at our result for completeness.
-In the upper part of the screen you'll see an image of the city you've searched.
-<img src="src/assets/img/city-image-screenshot.png" alt="this image is a screenshot of the website">
-Lowering the gaze you can see a description box with city name, the country it belongs to and a brief description of the city.
-<img src="src/assets/img/city-description-screenshot.png" alt="this image is a screenshot of the website">
-At the left of the screen you can also see a bunch of scores (like the one in photo) useful to evaluate the city. The result is rounded up to the nearest number in a scale from 1 to 10.
-<img src="src/assets/img/city-scores-screenshot.png" alt="this image is a screenshot of the website">
-And that's it, you can obtain this data for every city in the database.
+Here in the page dedicated to recipes the user has parameters to direct the research to what exatly they need. <br>
+The research won't start until the user press the search button near the searchbar, so they can select if they need the recipe to be gluten free, vegan, if they want to search for a particular cuisine and if they want to search for a specific word in the recipe. <br>
+And that's it. As i said it's super simple, the recipes will show up and the only thing the user have to do is click the recipe is interested in to see in details ingredients and instruction to cook the dish!
+
+### About page
+
+The last page is simply dedicated to introduce an hypothetical society who decided to create this website. I thought that if I was the one interested to sensitize people to eat less meat i wuold like to introduce myself and my motivation. I think in this kinf of project is important to make sure users know they are supported in their journey to eat better, that is not always easy.
 
 <p align="right"><a href="#top">return to the top</a></p>
 
