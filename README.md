@@ -80,7 +80,9 @@ All the information were provided by [Spoonacular API](https://spoonacular.com/f
 - Organized project structure
 - UX and UI easy to use
 - Write a README file
-  Every addictional feature is welcome, especially:
+
+Every addictional feature is welcome, especially:
+
 - React Redux
 - React Hooks
 - Axios
