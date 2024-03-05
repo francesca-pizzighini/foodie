@@ -98,8 +98,6 @@ function Recipes() {
     })()
   }, [searchStart])
 
-  console.log(url)
-
   return (
     <div>
         <Navbar/>
