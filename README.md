@@ -80,7 +80,12 @@ All the information were provided by [Spoonacular API](https://spoonacular.com/f
 - Organized project structure
 - UX and UI easy to use
 - Write a README file
-- Every addictional feature is welcome, especially: - React Redux - React Hooks - Axios - React Router - COntext API
+  Every addictional feature is welcome, especially:
+- React Redux
+- React Hooks
+- Axios
+- React Router
+- Context API
 <p align="right"><a href="#top">return to the top</a></p>
 
 ## Design inspiration
