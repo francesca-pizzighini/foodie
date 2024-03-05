@@ -9,7 +9,7 @@ Try the website <a href= "https://foodie-veggie.netlify.app">here</a>.
 <br>
 Or continue reading about the project <a href= "#the-project">here</a>.
 
-<img src="./src/assets/img/screenshot-foodie.png" alt="this image is a screenshot of the website">
+<img src="https://i.pinimg.com/736x/85/c8/90/85c890c1cd0f88c54e555bc82544fde5.jpg" alt="this image is a screenshot of the website">
 
 <details>
     <summary>Index</summary>
