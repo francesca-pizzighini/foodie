@@ -1,4 +1,5 @@
 import Navbar from "../components/navbar"
+import Footer from "../components/footer"
 
 function ErrorPage() {
   return (
@@ -16,6 +17,10 @@ function ErrorPage() {
         </p>
 
         </div>
+
+        <div style={{height: "100px"}}></div>
+
+        <Footer/>
     </div>
   )
 }
