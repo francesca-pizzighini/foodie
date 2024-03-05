@@ -72,9 +72,9 @@ All the information were provided by [Spoonacular API](https://spoonacular.com/f
 ### Technical requisite
 
 - Using React
-- Implementing a searchbar which search in all vegetarian recipes, and only them. Reading carefully the documentation of the API we required for this
+- Implementing a searchbar which search in all vegetarian recipes, and only them. Reading carefully the documentation of the API was required for this
 - Every recipe needs to show name and image of the dish
-- Every recipe in clickable and redirect to a specific page where you can see more details about that dish
+- Every recipe is clickable and redirect to a specific page where you can see more details about that dish
 - Responsive designe
 - Organized project structure
 - UX and UI easy to use
@@ -156,7 +156,7 @@ First of all open the website [here](https://foodie-veggie.netlify.app).
 
 ### Home Page
 
-In the homepage will randomly appear 3 vegetarian recipes everytime the page is loaded. This is for everyone who needs inspiration to find the right recipe, or just want a little caos in theri life. <br>
+In the homepage will randomly appear 3 vegetarian recipes everytime the page is loaded. This is for everyone who needs inspiration to find the right recipe, or just want a little caos in their life. <br>
 Every recipe shows name, image and specify if is vegan or gluten free. I thought it wuold be useful fo everyone who need to know those specification and can't use a selector as in recipes page.
 
 ### Search a specific recipe
@@ -167,7 +167,7 @@ And that's it. As i said it's super simple, the recipes will show up and the onl
 
 ### About page
 
-The last page is simply dedicated to introduce an hypothetical society who decided to create this website. I thought that if I was the one interested to sensitize people to eat less meat i wuold like to introduce myself and my motivation. I think in this kinf of project is important to make sure users know they are supported in their journey to eat better, that is not always easy.
+The last page is simply dedicated to introduce an hypothetical society who decided to create this website. I thought that if I was the one interested to sensitize people to eat less meat i wuold like to introduce myself and my motivation. I think in this kind of project is important to make sure users know they are supported in their journey to eat better, that is not always easy.
 
 <p align="right"><a href="#top">return to the top</a></p>
 
