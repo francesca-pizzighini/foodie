@@ -72,9 +72,9 @@ All the information were provided by [Spoonacular API](https://spoonacular.com/f
 ### Technical requisite
 
 - Using React
-- Implementing a searchbar which search in all vegetarian recipes, and only them. You needed to read carefully the documentation of the API
+- Implementing a searchbar which search in all vegetarian recipes, and only them. Reading carefully the documentation of the API we required for this
 - Every recipe needs to show name and image of the dish
-- every recipe in clickable and redirect to a specific page where you can see more details about that dish
+- Every recipe in clickable and redirect to a specific page where you can see more details about that dish
 - Responsive designe
 - Organized project structure
 - UX and UI easy to use
