@@ -446,6 +446,9 @@ a:-webkit-any-link{
 }
 
 //loading
+.home-loading.loading{
+  margin-top: 50px;
+}
 .loading{
   width: 100px;
   margin: 0 auto;
@@ -883,7 +886,7 @@ a:-webkit-any-link{
     .card-container{
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+      align-items: start;
     
       .card {
         width: 250px;

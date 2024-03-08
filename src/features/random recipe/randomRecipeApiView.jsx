@@ -5,6 +5,7 @@ import { HashLink } from "react-router-hash-link";
 
 import CardRecipe from "../../components/cardRecipe";
 import ErrorMessage from "../../components/errorMessage";
+import loadingImage from "../../assets/img/load-icon.png";
 
 function RandomRecipeApiView() {
     const dispatch = useDispatch();
@@ -19,9 +20,13 @@ function RandomRecipeApiView() {
         <div className="card-container random-recipe">
             {loadingState.loading && (
                 <div 
-                    className="loading"
+                    className="loading home-loading"
                 >
-                    <p>Loading...</p>
+                    <img 
+                        src={loadingImage} 
+                        alt="loading..."
+                        className="loading-image"
+                    />
                 </div>
             )}
             
