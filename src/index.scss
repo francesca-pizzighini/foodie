@@ -445,6 +445,26 @@ a:-webkit-any-link{
   }
 }
 
+//loading
+.loading{
+  width: 100px;
+  margin: 0 auto;
+
+  .loading-image{
+    width: 100px;
+    height: 100px;
+    animation: 2s linear 0s infinite rotation;
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+};
+
 
 
 //media queries

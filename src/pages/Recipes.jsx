@@ -7,7 +7,7 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import CardRecipe from "../components/cardRecipe";
 import ErrorMessage from "../components/errorMessage";
-import { set } from "lodash";
+import loadingImage from "../assets/img/load-icon.png"
 
 function Recipes() { 
   const id = useId();
@@ -84,7 +84,6 @@ function Recipes() {
     (async () => {
       try{
         setError(false);
-
         setLoading(true)
 
         const response = await axios.get(url);
@@ -109,8 +108,6 @@ function Recipes() {
       }
     })()
   }, [searchStart])
-
-  console.log(url)
 
   return (
     <div>
@@ -233,23 +230,37 @@ function Recipes() {
         >
           {error ? <ErrorMessage/> : null}
 
-          <div
-            className="card-container random-recipe"
+          <div 
+            className="loading"
           >
-            {recipes.map(recipe => (
-              <HashLink
-                to={`/recipes/${recipe.id}#navbar`}
-                key={recipe.id}
-              >
-                <CardRecipe
-                  key={recipe.id}
-                  id={recipe.id}
-                  image={recipe.image}
-                  title={recipe.title}
-                />
-              </HashLink>
-            ))}
+            {loading && (
+              <img 
+                src={loadingImage} 
+                alt="loading..."
+                className="loading-image"
+              />
+            )} 
           </div>
+
+          {!loading && (
+            <div
+              className="card-container random-recipe"
+            >
+              {recipes.map(recipe => (
+                <HashLink
+                  to={`/recipes/${recipe.id}#navbar`}
+                  key={recipe.id}
+                >
+                  <CardRecipe
+                    key={recipe.id}
+                    id={recipe.id}
+                    image={recipe.image}
+                    title={recipe.title}
+                  />
+                </HashLink>
+              ))}
+            </div>
+          )}
         </div>
 
         <Footer/>
