@@ -79,7 +79,7 @@ function Recipes() {
     (async () => {
       try{
         setError(false);
-        console.log('dev prova')
+        console.log('dev prova visualizzazione')
 
         const response = await axios.get(url);
         const data = await response.data.results;
