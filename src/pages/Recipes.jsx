@@ -7,6 +7,7 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import CardRecipe from "../components/cardRecipe";
 import ErrorMessage from "../components/errorMessage";
+import { set } from "lodash";
 
 function Recipes() { 
   const id = useId();
@@ -27,13 +28,15 @@ function Recipes() {
     query: "",
     isVegan: false,
     isGlutenFree: false,
-    cuisine: ""
+    cuisine: "",
+    dietString: ""
   })
   const [diet, setDiet] = useState("")
   const [recipes, setRecipes] = useState([])
   const [error, setError] = useState(false)
+  const [loading, setLoading] = useState(false)
 
-  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey4}&diet=vegetarian${diet}&cuisine=${searchStart.cuisine}&number=12&query=${searchStart.query}`;
+  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey5}&diet=vegetarian${searchStart.dietString}&cuisine=${searchStart.cuisine}&number=12&query=${searchStart.query}`;
 
   function handleChange(e){
     const { name, value, type, checked } = e.target;
@@ -71,15 +74,18 @@ function Recipes() {
       query: correctedQuery,
       isVegan: formData.isVegan,
       isGlutenFree: formData.isGlutenFree,
-      cuisine: formData.cuisine
+      cuisine: formData.cuisine,
+      dietString: diet
     }));
+    setDiet("")
   }
 
   useEffect(() => {
     (async () => {
       try{
         setError(false);
-        console.log('dev prova visualizzazione')
+
+        setLoading(true)
 
         const response = await axios.get(url);
         const data = await response.data.results;
@@ -88,16 +94,23 @@ function Recipes() {
         setFormData(prevData => {
           return {
             ...prevData,
-            query: ""
+            query: "",
+            isVegan: false,
+            isGlutenFree: false,
+            cuisine: "",
           }
         })
 
       } catch (err) {
         console.log(err);
         setError(true);
+      } finally{
+        setLoading(false)
       }
     })()
   }, [searchStart])
+
+  console.log(url)
 
   return (
     <div>
@@ -148,6 +161,7 @@ function Recipes() {
               value={formData.cuisine}
               onChange={handleChange}
               className="poppins-extralight"
+              disabled={loading}
             >
               <option value="">No selection</option>
               <option value="african">African</option>
@@ -189,8 +203,9 @@ function Recipes() {
                   type="checkbox"
                   name="isVegan"
                   id={id + "-isVegan"}
-                  defaultChecked={formData.isVegan}
+                  checked={formData.isVegan}
                   onChange={handleChange}
+                  disabled={loading}
                 ></input>
               </div>
               
@@ -204,8 +219,9 @@ function Recipes() {
                   type="checkbox"
                   name="isGlutenFree"
                   id={id + "-isGlutenFree"}
-                  defaultChecked={formData.isGlutenFree}
+                  checked={formData.isGlutenFree}
                   onChange={handleChange}
+                  disabled={loading}
                 ></input>
               </div>
             </div>
