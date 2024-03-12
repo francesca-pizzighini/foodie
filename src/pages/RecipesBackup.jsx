@@ -39,7 +39,7 @@ function RecipesBackup() {
     const [diet, setDiet] = useState("")
     const [recipes, setRecipes] = useState([])
 
-    const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey3}&diet=vegetarian${searchStart.dietString}&cuisine=${searchStart.cuisine}&number=12&query=${searchStart.query}`;
+    const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey4}&diet=vegetarian${searchStart.dietString}&cuisine=${searchStart.cuisine}&number=12&query=${searchStart.query}`;
 
     function onSubmit(data) {
         console.log("click")

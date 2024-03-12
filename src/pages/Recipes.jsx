@@ -42,7 +42,6 @@ function Recipes() {
     const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey3}&diet=vegetarian${searchStart.dietString}&cuisine=${searchStart.cuisine}&number=12&query=${searchStart.query}`;
 
     function onSubmit(data) {
-        console.log("click")
         setFormData(prevFormData => {
             return {
                 ...prevFormData,
