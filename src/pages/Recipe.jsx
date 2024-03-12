@@ -14,12 +14,8 @@ function Recipe({}) {
   const recipeId = useParams().recipeId;
 
   const apiKey = import.meta.env.VITE_API_KEY;
-  const apiKey2 = import.meta.env.VITE_API_KEY2;
-  const apiKey3 = import.meta.env.VITE_API_KEY3;
-  const apiKey4 = import.meta.env.VITE_API_KEY4;
-  const apiKey5 = import.meta.env.VITE_API_KEY5;
 
-  const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey4}&includeNutrition=true`;
+  const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${apiKey}&includeNutrition=true`;
 
   const [recipeData, setRecipeData] = useState({});
   const [ingredients, setIngredients] = useState([]);

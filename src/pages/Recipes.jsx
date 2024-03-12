@@ -16,10 +16,6 @@ function Recipes() {
     const { register, handleSubmit } = useForm();
 
     const apiKey = import.meta.env.VITE_API_KEY;
-    const apiKey2 = import.meta.env.VITE_API_KEY2;
-    const apiKey3 = import.meta.env.VITE_API_KEY3;
-    const apiKey4 = import.meta.env.VITE_API_KEY4;
-    const apiKey5 = import.meta.env.VITE_API_KEY5;
 
     const [formData, setFormData] = useState({
         query: "",
@@ -39,7 +35,7 @@ function Recipes() {
     const [diet, setDiet] = useState("")
     const [recipes, setRecipes] = useState([])
 
-    const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey3}&diet=vegetarian${searchStart.dietString}&cuisine=${searchStart.cuisine}&number=12&query=${searchStart.query}`;
+    const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian${searchStart.dietString}&cuisine=${searchStart.cuisine}&number=12&query=${searchStart.query}`;
 
     function onSubmit(data) {
         setFormData(prevFormData => {
