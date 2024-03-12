@@ -32,7 +32,7 @@ function RandomRecipeApiView() {
             
             {!loadingState.loading && loadingState.error ? <ErrorMessage/> : null}
             
-            {randomRecipe.map(recipe => (
+            {!loadingState.loading && randomRecipe.map(recipe => (
                 <HashLink
                     to={`/recipes/${recipe.id}#navbar`}
                     key={recipe.id}
