@@ -6,6 +6,8 @@ import {v4 as uuidv4} from 'uuid';
 import Navbar from "../components/navbar";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+
 
 function Recipe({}) {
   const recipeId = useParams().recipeId;
@@ -38,6 +40,20 @@ function Recipe({}) {
 
   return (
     <div>
+        <HelmetProvider>
+          <Helmet>
+            <title>{recipeData.title}</title>
+            <meta 
+              name="description"
+              content="Discover information about the dish you've chosen, like how long is teh prepatation, how many servings it contains, and how many calories it contains. You can also see the ingredients and instructions of the dish. Have fun and enjoy your meal"
+            ></meta>
+            <meta 
+              name="keywords" 
+              content="recipes, vegetarian, vegan, health, gluten-free, healthy-cousine, heltier-life, care-for-the-planet, igredients, instructions, calories, ready-in"
+            ></meta>
+          </Helmet>
+        </HelmetProvider>
+
         <Navbar/>
 
         <Header

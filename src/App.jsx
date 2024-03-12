@@ -2,10 +2,25 @@ import Navbar from "./components/navbar.jsx";
 import Header from "./components/header.jsx";
 import Footer from './components/footer.jsx';
 import RandomRecipeApiView from './features/random recipe/randomRecipeApiView.jsx';
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 function App() {
   return (
     <>
+      <HelmetProvider>
+        <Helmet>
+          <title>Foodie</title>
+          <meta 
+            name="description"
+            content="Discover new vegetarian and vegan recipes everyday! We have houndreds of healthy and delicious recipes from various cuisine, and you can display only the ones you are interested in. We also have a selector to only show gluten-free recipes AND one for vegan recipes, come and discover your next meal!"
+          ></meta>
+          <meta 
+            name="keywords" 
+            content="recipes, vegetarian, vegan, health, gluten-free, healthy-cousine, heltier-life, care-for-the-planet"
+          ></meta>
+        </Helmet>
+      </HelmetProvider>
+
       <Navbar/>
 
       <Header

@@ -1,9 +1,24 @@
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 function ErrorPage() {
   return (
     <div className="error">
+      <HelmetProvider>
+        <Helmet>
+          <title>An error occurred</title>
+          <meta 
+            name="description"
+            content="This page show up when an error occurs. Please try to reload the page. If the error persist contact us through the link in the page."
+          ></meta>
+          <meta 
+            name="keywords" 
+            content="recipes, vegetarian, vegan, health, gluten-free, healthy-cousine, heltier-life, care-for-the-planet, error"
+          ></meta>
+        </Helmet>
+      </HelmetProvider>
+
       <Navbar/>
       
       <div className="safe">

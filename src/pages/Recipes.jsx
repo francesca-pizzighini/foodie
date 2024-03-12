@@ -7,7 +7,8 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import CardRecipe from "../components/cardRecipe";
 import ErrorMessage from "../components/errorMessage";
-import loadingImage from "../assets/img/load-icon.png"
+import loadingImage from "../assets/img/load-icon.png";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 function Recipes() { 
   const id = useId();
@@ -36,7 +37,7 @@ function Recipes() {
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey5}&diet=vegetarian${searchStart.dietString}&cuisine=${searchStart.cuisine}&number=12&query=${searchStart.query}`;
+  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey2}&diet=vegetarian${searchStart.dietString}&cuisine=${searchStart.cuisine}&number=12&query=${searchStart.query}`;
 
   function handleChange(e){
     const { name, value, type, checked } = e.target;
@@ -111,6 +112,20 @@ function Recipes() {
 
   return (
     <div>
+        <HelmetProvider>
+          <Helmet>
+            <title>Discover your next meal</title>
+            <meta 
+              name="description"
+              content="Discover new vegetarian and vegan recipes everyday! We have houndreds of healthy and delicious recipes from various cuisine, and you can display only the ones you are interested in. We also have a selector to only show gluten-free recipes AND one for vegan recipes, come and discover your next meal!"
+            ></meta>
+            <meta 
+              name="keywords" 
+              content="recipes, vegetarian, vegan-recipes, health, gluten-free, healthy-cousine, heltier-life, care-for-the-planet, multiple-cuisine, search-by-name"
+            ></meta>
+          </Helmet>
+        </HelmetProvider>
+
         <Navbar/>
 
         <Header
