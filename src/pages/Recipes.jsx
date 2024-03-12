@@ -104,7 +104,7 @@ function Recipes() {
       } catch (err) {
         console.log(err);
         setError(true);
-      } finally{
+      } finally {
         setLoading(false)
       }
     })()
