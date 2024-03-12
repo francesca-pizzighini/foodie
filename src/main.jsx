@@ -12,6 +12,7 @@ import About from "./pages/About.jsx";
 import Recipes from "./pages/Recipes.jsx";
 import Recipe from "./pages/Recipe.jsx";
 import ErrorPage from "./pages/errorPage.jsx";
+import RecipesBackup from "./pages/RecipesBackup.jsx";
 
 
 const router = createBrowserRouter([
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/recipes",
-    element: <Recipes/>,
+    element: <RecipesBackup/>,
     errorElement: <ErrorPage/>
   },
   {

@@ -45,7 +45,9 @@ function Recipe({}) {
   }, [])
 
   return (
-    <div>
+    <div
+      style={loading ? {cursor: "wait"} : {cursor: "auto"}}
+    >
         <HelmetProvider>
           <Helmet>
             <title>{recipeData.title}</title>

@@ -11,7 +11,7 @@ import ErrorMessage from "../components/errorMessage";
 import loadingImage from "../assets/img/load-icon.png";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
-function Recipes() { 
+function RecipesBackup() { 
     const id = useId();
     const { register, handleSubmit } = useForm();
 
@@ -276,4 +276,4 @@ function Recipes() {
   )
 }
 
-export default Recipes;
+export default RecipesBackup;
