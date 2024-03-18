@@ -47,7 +47,7 @@ Or continue reading about the project <a href= "#the-project">here</a>.
         <li>
             <a href="#a-quick-guide-to-use">A quick guide to use</a>
             <ul>
-                <li><a href="#home-page">Search for the city</a></li>
+                <li><a href="#home-page">Home page</a></li>
                 <li><a href="#search-a-specific-recipe">Search a specific recipe</a></li>
                 <li><a href="#about-page">About page</a></li>
             </ul>
