@@ -394,6 +394,37 @@ a:-webkit-any-link{
     }
   }
 }
+// pagination
+.pagination{
+  ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li{
+      list-style-type: none;
+      
+      a{
+        color: $dark-color;
+        padding: 0 15px;
+        margin: 0 5px;
+        border-radius: 5px;
+      }
+      a:hover{
+        background-color: #0A472E;
+        color: $light-color;
+      }
+      a:focus{
+        background-color: #0A472E;
+          color: $light-color;
+      }
+      a:active{
+        background-color: #0A472E;
+        color: $light-color;
+      }
+    }
+  }
+}
 
 //error
 .error{

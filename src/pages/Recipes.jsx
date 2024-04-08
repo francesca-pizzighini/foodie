@@ -9,6 +9,7 @@ import Footer from "../components/footer";
 import CardRecipe from "../components/cardRecipe";
 import ErrorMessage from "../components/errorMessage";
 import loadingImage from "../assets/img/load-icon.png";
+import Pagination from "../components/pagination";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 function Recipes() {
@@ -34,8 +35,10 @@ function Recipes() {
   const [error, setError] = useState(false);
   const [diet, setDiet] = useState("");
   const [recipes, setRecipes] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [recipesPerPage] = useState(6);
 
-  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian${searchStart.dietString}&cuisine=${searchStart.cuisine}&number=12&query=${searchStart.query}`;
+  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&diet=vegetarian${searchStart.dietString}&cuisine=${searchStart.cuisine}&number=60&query=${searchStart.query}`;
 
   function onSubmit(data) {
     setFormData((prevFormData) => {
@@ -107,6 +110,16 @@ function Recipes() {
       }
     })();
   }, [searchStart]);
+
+  //pagination
+  const indexOfLastRecipe = currentPage * recipesPerPage;
+  const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
+  const currentRecipes = recipes.slice(indexOfFirstRecipe, indexOfLastRecipe);
+
+  // Change page
+  function paginate(pageNumber) {
+    setCurrentPage(pageNumber);
+  }
 
   return (
     <div style={loading ? { cursor: "wait" } : { cursor: "auto" }}>
@@ -233,18 +246,25 @@ function Recipes() {
         </div>
 
         {!loading && (
-          <div className="card-container random-recipe">
-            {recipes.map((recipe) => (
-              <HashLink to={`/recipes/${recipe.id}#navbar`} key={recipe.id}>
-                <CardRecipe
-                  key={recipe.id}
-                  id={recipe.id}
-                  image={recipe.image}
-                  title={recipe.title}
-                />
-              </HashLink>
-            ))}
-          </div>
+          <>
+            <div className="card-container random-recipe">
+              {currentRecipes.map((recipe) => (
+                <HashLink to={`/recipes/${recipe.id}#navbar`} key={recipe.id}>
+                  <CardRecipe
+                    key={recipe.id}
+                    id={recipe.id}
+                    image={recipe.image}
+                    title={recipe.title}
+                  />
+                </HashLink>
+              ))}
+            </div>
+            <Pagination
+              recipesPerPage={recipesPerPage}
+              totalRecipes={recipes.length}
+              paginate={paginate}
+            />
+          </>
         )}
       </div>
 
