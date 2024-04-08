@@ -16,7 +16,7 @@ function Recipes() {
   const id = useId();
   const { register, handleSubmit } = useForm();
 
-  const apiKey = import.meta.env.VITE_API_KEY2;
+  const apiKey = import.meta.env.VITE_API_KEY3;
 
   const [formData, setFormData] = useState({
     query: "",
