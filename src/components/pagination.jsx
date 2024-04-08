@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function Pagination({ recipesPerPage, totalRecipes, paginate, currentPage }) {
   const pageNumbers = [];
@@ -12,16 +12,16 @@ function Pagination({ recipesPerPage, totalRecipes, paginate, currentPage }) {
       <ul>
         {pageNumbers.map((number) => (
           <li key={number} className="number">
-            <Link
+            <HashLink
               onClick={(e) => {
-                e.preventDefault();
+                // e.preventDefault();
                 paginate(number);
               }}
-              href="!#"
+              to={"/recipes#form"}
               className={currentPage === number ? "active" : ""}
             >
               {number}
-            </Link>
+            </HashLink>
           </li>
         ))}
       </ul>

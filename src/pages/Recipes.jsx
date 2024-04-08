@@ -144,7 +144,11 @@ function Recipes() {
         text="Find your next meal"
       />
 
-      <form className="safe search-bar" onSubmit={handleSubmit(onSubmit)}>
+      <form
+        id="form"
+        className="safe search-bar"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div className="bar">
           <input
             {...register("query")}
@@ -247,6 +251,13 @@ function Recipes() {
 
         {!loading && (
           <>
+            <Pagination
+              recipesPerPage={recipesPerPage}
+              totalRecipes={recipes.length}
+              paginate={paginate}
+              currentPage={currentPage}
+            />
+
             <div className="card-container random-recipe">
               {currentRecipes.map((recipe) => (
                 <HashLink to={`/recipes/${recipe.id}#navbar`} key={recipe.id}>
