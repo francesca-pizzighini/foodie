@@ -414,14 +414,18 @@ a:-webkit-any-link{
         background-color: #0A472E;
         color: $light-color;
       }
-      a:focus{
-        background-color: #0A472E;
-          color: $light-color;
-      }
-      a:active{
+      a.active{
         background-color: #0A472E;
         color: $light-color;
       }
+      // a:focus{
+      //   background-color: #0A472E;
+      //   color: $light-color;
+      // }
+      // a:active{
+      //   background-color: #0A472E;
+      //   color: $light-color;
+      // }
     }
   }
 }

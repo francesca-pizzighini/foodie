@@ -16,7 +16,7 @@ function Recipes() {
   const id = useId();
   const { register, handleSubmit } = useForm();
 
-  const apiKey = import.meta.env.VITE_API_KEY;
+  const apiKey = import.meta.env.VITE_API_KEY2;
 
   const [formData, setFormData] = useState({
     query: "",
@@ -263,6 +263,7 @@ function Recipes() {
               recipesPerPage={recipesPerPage}
               totalRecipes={recipes.length}
               paginate={paginate}
+              currentPage={currentPage}
             />
           </>
         )}

@@ -1,6 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Pagination({ recipesPerPage, totalRecipes, paginate }) {
+function Pagination({ recipesPerPage, totalRecipes, paginate, currentPage }) {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalRecipes / recipesPerPage); i++) {
@@ -12,15 +12,16 @@ function Pagination({ recipesPerPage, totalRecipes, paginate }) {
       <ul>
         {pageNumbers.map((number) => (
           <li key={number} className="number">
-            <NavLink
+            <Link
               onClick={(e) => {
                 e.preventDefault();
                 paginate(number);
               }}
               href="!#"
+              className={currentPage === number ? "active" : ""}
             >
               {number}
-            </NavLink>
+            </Link>
           </li>
         ))}
       </ul>
